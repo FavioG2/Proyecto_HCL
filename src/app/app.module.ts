@@ -13,6 +13,9 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 
+
+import { RegistroPacientePage } from '../pages/index.paginas';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyBXrUaZ_kYyeux83Z0FFx9Mml89SRGbQKg",
   authDomain: "hiper-1153d.firebaseapp.com",
@@ -25,11 +28,14 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    RegistroPacientePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Atrás'
+    } ),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
@@ -37,7 +43,8 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    RegistroPacientePage
   ],
   providers: [
     StatusBar,

@@ -7,6 +7,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { HomePage } from  '../pages/home/home';
 
+
 @Component({
   templateUrl: 'app.html'
 })

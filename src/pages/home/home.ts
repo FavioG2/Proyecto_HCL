@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 
+import { RegistroPacientePage } from "../index.paginas";
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -14,7 +16,11 @@ export class HomePage {
   }
 
   cerrarSesion(){
-      this.auth.logout();
+    this.auth.logout();
+  }
+
+  ir_a_registro(){
+    this.navCtrl.push(RegistroPacientePage);
   }
 
 }
