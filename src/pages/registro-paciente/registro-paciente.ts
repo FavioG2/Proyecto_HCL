@@ -48,7 +48,7 @@ export class RegistroPacientePage {
     if ( this.paciente.nombre != '' && this.paciente.fecha_nac != ''
         && this.paciente.edad != null && this.paciente.motivo != ''){
       this.almacenar.guardar('pacientes', this.paciente, this.paciente.key);
-      this.vars.paciente = this.paciente.key;
+      this.vars.paciente = this.paciente;
       this.presentLoadingDefault('Almacenando información');
       this.atras();
     } else {

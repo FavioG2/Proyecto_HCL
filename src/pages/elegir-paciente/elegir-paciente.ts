@@ -5,6 +5,10 @@ import { Observable } from 'rxjs';
 
 import { VariablesProvider } from '../../providers/variables/variables';
 
+import { paciente } from "../../pages/clases/pacientes"
+
+import { PacientePage } from "../../pages/index.paginas";
+
 /**
  * Generated class for the ElegirPacientePage page.
  *
@@ -28,11 +32,18 @@ export class ElegirPacientePage {
   {
     this.itemsCollection = this.afs.collection('pacientes', ref => ref.where('usuario', '==', this.vars.email)/* , ref => ref.where('nombre', '==', 'favio')/**/)//ref()
     this.posts = this.itemsCollection.valueChanges()
-    
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ElegirPacientePage');
+  }
+
+  imprimir(paciente:paciente){
+    this.vars.paciente = paciente;
+    console.log(paciente.key);
+    this.navCtrl.pop();
+    this.navCtrl.push(PacientePage);
   }
 
 }
