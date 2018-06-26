@@ -7,6 +7,9 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 
 import { paciente } from "../../pages/clases/pacientes"
 
+
+import { PacientePage } from "../../pages/index.paginas";
+
 @IonicPage()
 @Component({
   selector: 'page-registro-paciente',
@@ -50,7 +53,8 @@ export class RegistroPacientePage {
       this.almacenar.guardar('pacientes', this.paciente, this.paciente.key);
       this.vars.paciente = this.paciente;
       this.presentLoadingDefault('Almacenando información');
-      this.atras();
+      this.navCtrl.pop();
+      this.navCtrl.push(PacientePage);
     } else {
       this.almacenar.showAlert("error", "debes llenar todos los campos");
     }

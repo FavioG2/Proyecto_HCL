@@ -1,3 +1,12 @@
 page-paciente {
+  .toolbar-title {
+    .subtitle {
+      font-size: 66%;
+      margin: 0;
+    }
+  }
 
+  ion-content {
+    background-image: url('../assets/imgs/bmd-Splash-bg.png');
+}
 }

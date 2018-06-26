@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { VariablesProvider } from '../../providers/variables/variables';
+
 /**
  * Generated class for the PacientePage page.
  *
@@ -15,7 +17,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PacientePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private vars : VariablesProvider) {
   }
 
   ionViewDidLoad() {

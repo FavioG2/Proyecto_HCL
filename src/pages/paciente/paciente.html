@@ -6,13 +6,19 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>paciente</ion-title>
+  <ion-navbar color = "primary">
+    <ion-title> {{this.vars.paciente.nombre}} </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding text-center>
+  <ion-grid>
+    <ion-row>
+        <ion-col  class="top-20">
+            <img style="max-width:100px;" [src]="this.vars.paciente.url_img">
+        </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
