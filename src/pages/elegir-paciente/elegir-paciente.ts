@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
+import { VariablesProvider } from '../../providers/variables/variables';
+
 /**
  * Generated class for the ElegirPacientePage page.
  *
@@ -21,10 +23,12 @@ export class ElegirPacientePage {
   posts: Observable<any[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              private afs: AngularFirestore)
+              private afs: AngularFirestore,
+              private vars: VariablesProvider)
   {
-    this.itemsCollection = this.afs.collection('pacientes'/* , ref => ref.where('nombre', '==', 'favio')/**/)//ref()
+    this.itemsCollection = this.afs.collection('pacientes', ref => ref.where('usuario', '==', this.vars.email)/* , ref => ref.where('nombre', '==', 'favio')/**/)//ref()
     this.posts = this.itemsCollection.valueChanges()
+    
   }
 
   ionViewDidLoad() {
