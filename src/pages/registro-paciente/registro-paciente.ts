@@ -5,6 +5,8 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 import { VariablesProvider } from '../../providers/variables/variables';
 import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 
+import { paciente } from "../../pages/clases/pacientes"
+
 @IonicPage()
 @Component({
   selector: 'page-registro-paciente',
@@ -12,15 +14,7 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 })
 export class RegistroPacientePage {
 
-  paciente = {
-    nombre : '',
-    fecha_nac : '',
-    edad : '',
-    url_img : '',
-    motivo : '',
-    usuario : '',
-    key : ''
-  }
+
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
@@ -37,15 +31,29 @@ export class RegistroPacientePage {
     this.navCtrl.pop();
   }
 
+    paciente: paciente = {
+      nombre : '',
+      fecha_nac : '',
+      edad : null,
+      url_img : '',
+      motivo : '',
+      usuario :  '',
+      key :  ''
+    };
+
   registrar(){
-    console.log("hola " + this.vars.email);
     this.paciente.url_img =  'https://www.newfieldconsulting.com/wp-content/uploads/2014/07/perfil.jpg';
     this.paciente.usuario = this.vars.email;
     this.paciente.key = JSON.stringify(Date.now());
-    this.almacenar.guardar('pacientes', this.paciente, this.paciente.key);
-    this.vars.paciente = this.paciente.key;
-    this.presentLoadingDefault('Almacenando información');
-    this.atras();
+    if ( this.paciente.nombre != '' && this.paciente.fecha_nac != ''
+        && this.paciente.edad != null && this.paciente.motivo != ''){
+      this.almacenar.guardar('pacientes', this.paciente, this.paciente.key);
+      this.vars.paciente = this.paciente.key;
+      this.presentLoadingDefault('Almacenando información');
+      this.atras();
+    } else {
+      this.almacenar.showAlert("error", "debes llenar todos los campos");
+    }
   }
 
   presentLoadingDefault(contenido: string) {
@@ -59,5 +67,7 @@ export class RegistroPacientePage {
       loading.dismiss();
     }, 2000);
 }
+
+
 
 }

@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary" class="bar-positive">
+  <ion-navbar color="primary" class="bar-positive" >
   </ion-navbar>
 
 </ion-header>
@@ -43,7 +43,11 @@
             </ion-textarea>
         </ion-item>
       </ion-card>
-        <button  class = "top-20" ion-button block  color="primary" round (click)="registrar()">Registrar Paciente</button>
+      <ion-row>
+        <button  class = "top-20" ion-button block icon-left color="primary" round (click)="registrar()">
+          <ion-icon name="cloud-upload"></ion-icon> Registrar Paciente</button>
+        <button  class = "top-5" ion-button block  color="primary" round (click)="atras()">Cancelar</button>
+      </ion-row>
     </ion-col>
   </ion-grid>
 </ion-content>
