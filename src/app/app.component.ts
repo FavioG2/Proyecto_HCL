@@ -7,6 +7,7 @@ import { AuthProvider } from '../providers/auth/auth';
 
 import { HomePage } from  '../pages/home/home';
 
+import { VariablesProvider } from '../providers/variables/variables';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,10 +18,16 @@ export class MyApp {
   constructor(platform: Platform,
               statusBar: StatusBar,
               splashScreen: SplashScreen,
-              private auth: AuthProvider) {
+              private auth: AuthProvider,
+              public vars: VariablesProvider) {
+
     platform.ready().then(() => {
 
       this.auth.Session.subscribe(session=>{
+        if(session != null ){
+          this.vars.email = session.email;
+        }
+
         if(session){
             this.rootPage = HomePage;
         }
@@ -28,6 +35,7 @@ export class MyApp {
             this.rootPage = 'LoginPage';
           }
       });
+
 
       statusBar.styleDefault();
       splashScreen.hide();

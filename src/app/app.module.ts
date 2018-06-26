@@ -12,9 +12,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 import { RegistroPacientePage } from '../pages/index.paginas';
+import { VariablesProvider } from '../providers/variables/variables';
+import { AlmacenarProvider } from '../providers/almacenar/almacenar';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBXrUaZ_kYyeux83Z0FFx9Mml89SRGbQKg",
@@ -38,7 +41,8 @@ export const firebaseConfig = {
     } ),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule.enablePersistence()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,7 +55,9 @@ export const firebaseConfig = {
     SplashScreen,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    VariablesProvider,
+    AlmacenarProvider
   ]
 })
 export class AppModule {}

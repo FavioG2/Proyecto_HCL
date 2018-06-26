@@ -45,4 +45,5 @@ export class AuthProvider {
   return this.afAuth.authState;
  }
 
+
 }
