@@ -14,16 +14,83 @@
 
 
 <ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+
+  <!-- grid identificacion de datos  -->
   <ion-grid>
     <ion-row>
       <font color="#c91e52"><b >IDENTIFICACIÓN DE DATOS</b></font>
     </ion-row>
-    <ion-row>
+    <ion-row> <!-- nombre  -->
       <ion-card id = "rounded">
         <ion-item id = "rounded">
-            <ion-label floating>Nombre</ion-label>
-            <ion-input name="nombre" type="text" autocapitalize="off" required [(ngModel)]="hcl.nombre">
+            <ion-label floating>Nombre del alumno</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.nombre">
             </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- fecha_nac  -->
+      <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Fecha de nacimiento</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_nac"></ion-datetime>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- edad  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Edad cronológica</ion-label>
+            <ion-input type="number" autocapitalize="off" required [(ngModel)]="hcl.edad">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- grado escolar -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Grado escolar</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.grado">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- genero -->
+      <ion-card id = "rounded">
+        <font color="#c8c8c8">Género</font>
+        <ion-row radio-group [(ngModel)]="hcl.genero">
+          <ion-col>
+            <ion-item>
+              <ion-label>hombre</ion-label>
+              <ion-radio value="hombre"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>mujer</ion-label>
+              <ion-radio value="mujer"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- colegio actual  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Colegio o escuela a la que asiste</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.colegio">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- fecha_entrevista  -->
+      <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Fecha de entrevista</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_entrevista"></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>

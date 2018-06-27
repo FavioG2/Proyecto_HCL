@@ -47,6 +47,8 @@ export class PacientePage {
         if(value.length > 0){
           this.texto_boton_hcl = "revisar o editar historia clínica"
           this.existe_hcl = true;
+          let hcl:hcl = value[0];
+          this.vars.hcl = hcl;
         }else{
           this.vars.hcl.clave = this.vars.paciente.key;
           this.vars.hcl.key = JSON.stringify(Date.now());

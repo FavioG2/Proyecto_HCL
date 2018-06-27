@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { VariablesProvider } from '../../providers/variables/variables';
+import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 
 import {  hcl } from  '../../pages/clases/hcl';
 
@@ -22,13 +23,17 @@ export class VerHclPage {
   hcl:hcl;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public vars: VariablesProvider) {
-
+              public vars: VariablesProvider,
+              private almacenar : AlmacenarProvider) {
     this.hcl = vars.hcl;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VerHclPage');
+  }
+
+  guardar_hcl(){
+    this.almacenar.guardar('hcl', this.hcl, this.hcl.key);
   }
 
 }
