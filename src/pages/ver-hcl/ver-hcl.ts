@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 import { VariablesProvider } from '../../providers/variables/variables';
 import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 
 import {  hcl } from  '../../pages/clases/hcl';
+
+import { IdentificacionGeneralPage } from '../../pages/index.paginas';
 
 /**
  * Generated class for the VerHclPage page.
@@ -20,11 +22,12 @@ import {  hcl } from  '../../pages/clases/hcl';
 })
 export class VerHclPage {
 
-  hcl:hcl;
+  public hcl:hcl;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public vars: VariablesProvider,
-              private almacenar : AlmacenarProvider) {
+              public almacenar : AlmacenarProvider,
+              public modalCtrl : ModalController) {
     this.hcl = vars.hcl;
   }
 
@@ -32,8 +35,15 @@ export class VerHclPage {
     console.log('ionViewDidLoad VerHclPage');
   }
 
-  guardar_hcl(){
+  public guardar_hcl(){
     this.almacenar.guardar('hcl', this.hcl, this.hcl.key);
   }
+
+  identificacion_general(){
+    this.modalCtrl.create(IdentificacionGeneralPage).present();
+
+  }
+
+
 
 }

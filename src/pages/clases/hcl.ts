@@ -19,6 +19,11 @@ export class hcl{
   edad_madre:string;
   profesion_madre:string;
   lugar_trabajo_madre:string;
+  nombre_encargado:string;
+  fecha_nac_encargado:string;
+  edad_encargado:string;
+  profesion_encargado:string;
+  lugar_trabajo_encargado:string;
   estado_civil_padres:string;
   motivo:string;
   areas_dificultad:string;

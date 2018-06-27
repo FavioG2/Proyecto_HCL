@@ -15,7 +15,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
-import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage } from '../pages/index.paginas';
+import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage, IdentificacionGeneralPage } from '../pages/index.paginas';
 import { VariablesProvider } from '../providers/variables/variables';
 import { AlmacenarProvider } from '../providers/almacenar/almacenar';
 
@@ -35,7 +35,8 @@ export const firebaseConfig = {
     RegistroPacientePage,
     ElegirPacientePage,
     PacientePage,
-    VerHclPage
+    VerHclPage,
+    IdentificacionGeneralPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +55,8 @@ export const firebaseConfig = {
     RegistroPacientePage,
     ElegirPacientePage,
     PacientePage,
-    VerHclPage
+    VerHclPage,
+    IdentificacionGeneralPage
   ],
   providers: [
     StatusBar,

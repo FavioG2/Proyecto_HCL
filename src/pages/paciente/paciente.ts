@@ -178,7 +178,12 @@ export class PacientePage {
       balbuceo: '',
       primeras_palabras: '',
       frases_dos_palabras: '',
-      oraciones_completas: ''
+      oraciones_completas: '',
+      nombre_encargado: '',
+      fecha_nac_encargado: '',
+      edad_encargado: '',
+      profesion_encargado: '',
+      lugar_trabajo_encargado: ''
     }
 
   }
