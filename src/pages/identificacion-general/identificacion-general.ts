@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
-import {  hcl } from  '../../pages/clases/hcl';
-import { VariablesProvider } from '../../providers/variables/variables';
-import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
-
 import { VerHclPage } from '../../pages/index.paginas'
 
 /**
@@ -24,9 +20,4 @@ export class IdentificacionGeneralPage extends VerHclPage{
   ionViewDidLoad() {
     console.log('ionViewDidLoad IdentificacionGeneralPage');
   }
-
-  end(){
-    this.navCtrl.pop();
-  }
-
 }
