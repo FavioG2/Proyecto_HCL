@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { VariablesProvider } from '../../providers/variables/variables';
+
+import {  hcl } from  '../../pages/clases/hcl';
+
 /**
  * Generated class for the VerHclPage page.
  *
@@ -15,7 +19,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class VerHclPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hcl:hcl;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public vars: VariablesProvider) {
+
+    this.hcl = vars.hcl;
   }
 
   ionViewDidLoad() {

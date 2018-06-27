@@ -14,5 +14,18 @@
 
 
 <ion-content padding>
-
+  <ion-grid>
+    <ion-row>
+      <font color="#c91e52"><b >IDENTIFICACIÓN DE DATOS</b></font>
+    </ion-row>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Nombre</ion-label>
+            <ion-input name="nombre" type="text" autocapitalize="off" required [(ngModel)]="hcl.nombre">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
 </ion-content>
