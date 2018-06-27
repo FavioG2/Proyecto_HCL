@@ -25,7 +25,7 @@ export class VerHclPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public vars: VariablesProvider,
               private almacenar : AlmacenarProvider) {
-    this.hcl = vars.hcl.hcl;
+    this.hcl = vars.hcl;
   }
 
   ionViewDidLoad() {
