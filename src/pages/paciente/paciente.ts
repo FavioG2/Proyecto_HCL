@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { VariablesProvider } from '../../providers/variables/variables';
-import { hcl } from '../../pages/clases/hcl'
+import { hcl } from '../../pages/clases/hcl';
+import { hclmanager } from '../../pages/clases/hcl_manager';
 
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
@@ -33,7 +34,6 @@ export class PacientePage {
               private vars : VariablesProvider, private afs: AngularFirestore)
   {
     this.cargar_hcl();
-    this.vars.hcl = new hcl();
   }
 
   ionViewDidLoad() {

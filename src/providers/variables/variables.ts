@@ -14,7 +14,7 @@ export class VariablesProvider {
   public email:string = '';
   public paciente:paciente = null;
 
-  public hcl:hcl = null;
+  public hcl:hcl;
 
   constructor() {
     console.log('Hello VariablesProvider Provider');
