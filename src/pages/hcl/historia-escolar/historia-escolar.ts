@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { VerHclPage } from '../../pages/index.paginas';
+import { VerHclPage } from '../../../pages/index.paginas';
 
 @IonicPage()
 @Component({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
-import { VerHclPage } from '../../pages/index.paginas'
+import { VerHclPage } from '../../../pages/index.paginas'
 
 /**
  * Generated class for the IdentificacionGeneralPage page.
