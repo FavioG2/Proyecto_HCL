@@ -1,0 +1,147 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+    <ion-row>
+        <font color="#c91e52"><b >HISTORIA ESCOLAR</b></font>
+    </ion-row>
+  <ion-row> <!-- edad inicio  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Edad de inicio de escolaridad</ion-label>
+          <ion-input type="number" autocapitalize="off" required [(ngModel)]="hcl.inicio_escolaridad">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- adaptación  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>¿Cómo fue su adaptación?</ion-label>
+          <ion-textarea rows="2" type="text" autocapitalize="off" required [(ngModel)]="hcl.adaptacion">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- repetido  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Indique grados escolares repetidos</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.grados_repetidos">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- por qué  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>¿Por qué los repitió?</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.razon_repetidos" [disabled] = "hcl.grados_repetidos==''">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- centros educativos  -->
+    <font color="#c91e52">Mencona los centros educativos en los que ha estudiado</font>
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Centros educativoso</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.centro_evaluacion">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- motivo cambio  -->
+    <font color="#c91e52">Mencona los motivos por los cuales ha cambiado entre centros educativos</font>
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Motivos de cambios</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.motivo_cambio">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- actitud -->
+    <ion-card id = "rounded">
+      <font color="#c8c8c8">Actitud frente a la institución educativa</font>
+      <ion-row radio-group [(ngModel)]="hcl.actitud_institucion_educativa">
+        <ion-col>
+          <ion-item>
+            <ion-label>agrado</ion-label>
+            <ion-radio value="agrado"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+           <ion-label>desagrado</ion-label>
+            <ion-radio value="desagrado"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- interacción compañeros  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>interacción con compañeros</ion-label>
+          <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.interaccion_companeros">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- interacción adultos  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>interacción con adultos</ion-label>
+          <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.interaccion_adultos">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- rendimiento-->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Rendimiento educativo</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.rendimiento" multiple="false">
+            <ion-option>Satisfactorio</ion-option>
+            <ion-option>Bueno</ion-option>
+            <ion-option>Regular</ion-option>
+            <ion-option>Excelente</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- materias dificultan  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>¿Qué materias se le dificultan?</ion-label>
+          <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.peores_materias">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- materias facilitan  -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>¿Qué materias se le facilitan?</ion-label>
+          <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.mejores_materias">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+  </ion-row>
+</ion-content>

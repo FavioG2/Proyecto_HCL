@@ -58,7 +58,7 @@ export class hcl{
   centro_evaluacion:string;
   motivo_cambio:string;
   actitud_institucion_educativa:string;
-  interaccion_compañeros:string;
+  interaccion_companeros:string;
   interaccion_adultos:string;
   rendimiento:string;
   mejores_materias:string;

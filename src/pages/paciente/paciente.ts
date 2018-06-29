@@ -116,7 +116,7 @@ export class PacientePage {
       centro_evaluacion: '',
       motivo_cambio: '',
       actitud_institucion_educativa: '',
-      interaccion_compañeros: '',
+      interaccion_companeros: '',
       interaccion_adultos: '',
       rendimiento: '',
       mejores_materias: '',
