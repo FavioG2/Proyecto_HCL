@@ -17,4 +17,228 @@
     <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
   </ion-fab>
 
+  <ion-grid>
+    <ion-row>
+        <font color="#c91e52"><b >HISTORIA FAMILIAR</b></font>
+    </ion-row>
+    <ion-row> <!-- NIVEL SOCIOECONOMICO -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Nivel socioeconómico de la familia</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.nivel_socioeconomico">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- estado casa -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Casa propia? y número de cuartos</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.estado_casa">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- familia integrada -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Familia integrada o desintegrada</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.integracion_familiar">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- duerme solo -->
+      <ion-card id = "rounded">
+        <font color="#c8c8c8">¿Duerme solo el niño (a)?</font>
+        <ion-row radio-group [(ngModel)]="hcl.duerme_solo">
+          <ion-col>
+            <ion-item>
+              <ion-label>si</ion-label>
+              <ion-radio value="si"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>no</ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- Con quien vive -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Con quién vive el niño (a)?</ion-label>
+            <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="hcl.con_quien_vive">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- cantidad hermanos-->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Número de hermanos</ion-label>
+            <ion-input type="number" autocapitalize="off" required [(ngModel)]="hcl.hermanos">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- Lugar entre hermanos -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Lugar que ocupa entre los hermanos</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.lugar_entre_hermanos">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- relacion familia  -->
+        <font color="#c91e52">Tipo de relación del evaluado con cada miembro de la familia</font>
+      <ion-card id = "rounded">
+        <ion-row text-center>
+          <ion-card id = "rounded">
+            <ion-row>
+              <ion-col col-7>
+                <font color="#c8c8c8">Papá</font>
+              </ion-col>
+              <ion-col>
+                <ion-select [(ngModel)]="hcl.relacion_papa" multiple="true">
+                  <ion-option>Afectiva</ion-option>
+                  <ion-option>Autoritaria</ion-option>
+                  <ion-option>Afectuosa</ion-option>
+                  <ion-option>Permisiva</ion-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-row>
+        <ion-row text-center>
+          <ion-card id = "rounded">
+            <ion-row>
+              <ion-col col-7>
+                <font color="#c8c8c8">Mamá</font>
+              </ion-col>
+              <ion-col>
+                <ion-select [(ngModel)]="hcl.relacion_mama" multiple="true">
+                  <ion-option>Afectiva</ion-option>
+                  <ion-option>Autoritaria</ion-option>
+                  <ion-option>Afectuosa</ion-option>
+                  <ion-option>Permisiva</ion-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-row>
+        <ion-row text-center>
+          <ion-card id = "rounded">
+            <ion-row>
+              <ion-col col-7>
+                <font color="#c8c8c8">Hermanos</font>
+              </ion-col>
+              <ion-col>
+                <ion-select [(ngModel)]="hcl.relacion_hermanos" multiple="true">
+                  <ion-option>Afectiva</ion-option>
+                  <ion-option>Autoritaria</ion-option>
+                  <ion-option>Afectuosa</ion-option>
+                  <ion-option>Permisiva</ion-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-row>
+        <ion-row text-center>
+          <ion-card id = "rounded">
+            <ion-row>
+              <ion-col col-7>
+                <font color="#c8c8c8">Otros</font>
+              </ion-col>
+              <ion-col>
+                <ion-select [(ngModel)]="hcl.relacion_otros" multiple="true">
+                  <ion-option>Afectiva</ion-option>
+                  <ion-option>Autoritaria</ion-option>
+                  <ion-option>Afectuosa</ion-option>
+                  <ion-option>Permisiva</ion-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row><!-- relacion familia descripcion -->
+      <font color="#c91e52">Describa la relación del evaluado con los miembros de la familia</font>
+      <ion-card id = "rounded">
+        <ion-row> <!-- estado casa -->
+          <ion-card id = "rounded">
+            <ion-item id = "rounded">
+                <ion-label floating>Papá</ion-label>
+                <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.relacion_papa_desc">
+                </ion-textarea>
+            </ion-item>
+          </ion-card>
+        </ion-row>
+        <ion-row> <!-- estado casa -->
+          <ion-card id = "rounded">
+            <ion-item id = "rounded">
+                <ion-label floating>Mamá</ion-label>
+                <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.relacion_mama_desc">
+                </ion-textarea>
+            </ion-item>
+          </ion-card>
+        </ion-row>
+        <ion-row> <!-- estado casa -->
+          <ion-card id = "rounded">
+            <ion-item id = "rounded">
+                <ion-label floating>Hermanos</ion-label>
+                <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.relacion_hermanos_desc">
+                </ion-textarea>
+            </ion-item>
+          </ion-card>
+        </ion-row>
+        <ion-row> <!-- estado casa -->
+          <ion-card id = "rounded">
+            <ion-item id = "rounded">
+                <ion-label floating>Otros</ion-label>
+                <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.relacion_otros_desc">
+                </ion-textarea>
+            </ion-item>
+          </ion-card>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- Disciplina en casa-->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">Tipo de disciplina en casa</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.disciplina_casa" multiple="true">
+              <ion-option>Asertiva</ion-option>
+              <ion-option>Autoritaria</ion-option>
+              <ion-option>Normas suaves</ion-option>
+              <ion-option>Inconsistente</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <font color="#c91e52">Medidas disciplinarias usadas con frecuencia frente a conductas negativas. Describirlas:</font>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Medidas disciplinarias</ion-label>
+            <ion-textarea rows = "5" type="text" autocapitalize="off" required [(ngModel)]="hcl.medidas_disciplina">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+
+    <ion-row>
+      <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

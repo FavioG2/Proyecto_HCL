@@ -184,7 +184,11 @@ export class PacientePage {
       edad_encargado: '',
       profesion_encargado: '',
       lugar_trabajo_encargado: '',
-      otra_area_dificultad:''
+      otra_area_dificultad:'',
+      relacion_papa_desc:'',
+      relacion_mama_desc:'',
+      relacion_hermanos_desc:'',
+      relacion_otros_desc:''
     }
 
   }

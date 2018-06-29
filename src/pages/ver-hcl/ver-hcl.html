@@ -13,14 +13,17 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding text-center>
   <ion-fab top right edge>
     <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
   </ion-fab>
 
   <!-- grid identificacion de datos  -->
+  <ion-row  class="top-20" >
+    <font color="#c91e52"><b >Categorías de la historia clínica</b></font>
+  </ion-row>
   <ion-row>
-    <button ion-button block class="top-20" color="primary" round outline (click) = "identificacion_general()">Datos del alumno</button>
+    <button ion-button block color="primary" round outline (click) = "identificacion_general()">Datos del alumno</button>
   </ion-row>
   <ion-row>
     <button ion-button block color="primary" round outline (click) = "identificacion_encargados()">Datos de encargados</button>
@@ -30,6 +33,9 @@
   </ion-row>
   <ion-row>
     <button ion-button block color="primary" round outline (click) = "historia_familiar()">Historia familiar</button>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round outline (click) = "historia_escolar()">Historia escolar</button>
   </ion-row>
     <!-- grid identificacion general -->
     <ion-row>

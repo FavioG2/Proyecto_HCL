@@ -6,3 +6,4 @@ export { IdentificacionGeneralPage } from "./identificacion-general/identificaci
 export { IdentificacionEncargadosPage } from "./identificacion-encargados/identificacion-encargados";
 export { MotivoConsultaPage } from "./motivo-consulta/motivo-consulta";
 export { HistoriaFamiliarPage } from "./historia-familiar/historia-familiar";
+export { HistoriaEscolarPage } from "./historia-escolar/historia-escolar";

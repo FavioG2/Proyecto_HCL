@@ -45,6 +45,10 @@ export class hcl{
   relacion_mama:string;
   relacion_hermanos:string;
   relacion_otros:string;
+  relacion_papa_desc:string;
+  relacion_mama_desc:string;
+  relacion_hermanos_desc:string;
+  relacion_otros_desc:string;
   disciplina_casa:string;
   medidas_disciplina:string;
   inicio_escolaridad:string;
