@@ -27,12 +27,13 @@ export class hcl{
   estado_civil_padres:string;
   motivo:string;
   areas_dificultad:string;
+  otra_area_dificultad:string;
   descripcion_problema:string;
   inicio_problema:string;
   actitud_encargado_problema:string;
-  existen_medidad:string;
+  existen_medidas:string;
   medidas_tomadas:string;
-  resultados_medidas:string;
+  resultados_medidas:string; //--------------------------------
   nivel_socioeconomico:string;
   estado_casa:string;
   integracion_familiar:string;

@@ -162,5 +162,20 @@
         </ion-item>
       </ion-card>
     </ion-row>
+    <ion-row>
+      <font color="#c91e52">Estado civil</font>
+    </ion-row>
+    <ion-row> <!-- estado civil -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Estado civil de los padres</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.estado_civil_padres">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <button ion-button block class="top-20" color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+    </ion-row>
   </ion-grid>
 </ion-content>

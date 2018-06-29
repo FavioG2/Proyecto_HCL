@@ -1,0 +1,132 @@
+<!--
+  Generated template for the MotivoConsultaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+
+  <ion-grid>
+    <ion-row>
+      <font color="#c91e52"><b >Motivo de la consulta</b></font>
+    </ion-row>
+    <ion-row> <!-- motivo  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Motivo por el cual es referido</ion-label>
+            <ion-textarea type="text" rows="3" autocapitalize="off" required [(ngModel)]="hcl.motivo">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- areas con dificultad  -->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">Presenta dificultad en:</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.areas_dificultad" multiple="true">
+              <ion-option>Conducta</ion-option>
+              <ion-option>Motricidad</ion-option>
+              <ion-option>Aprendizaje</ion-option>
+              <ion-option>Audición</ion-option>
+              <ion-option>Visión</ion-option>
+              <ion-option>Lenguaje</ion-option>
+              <ion-option>Área emocional</ion-option>
+              <ion-option>Otros</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- especifique  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Especifique si hay otra dificultad</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.otra_area_dificultad">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- describa el problema  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Describa brevemente el problema</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.descripcion_problema">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- inicio problema  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Cuándo inició el problema?</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.inicio_problema">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- actitud problema  -->
+      <font color="#c91e52">¿Cuál es la actitud de los padres o encargados ante el problema?</font>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Actitud ante el problema</ion-label>
+            <ion-textarea type="text" rows="2" autocapitalize="off" required [(ngModel)]="hcl.actitud_encargado_problema">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- han tomado medidas-->
+      <ion-card id = "rounded">
+        <font color="#c8c8c8">¿Han tomado medidas al respecto?</font>
+        <ion-row radio-group [(ngModel)]="hcl.existen_medidas">
+          <ion-col>
+            <ion-item>
+              <ion-label>si</ion-label>
+              <ion-radio value="si"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>no</ion-label>
+              <ion-radio value="no"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- medidas tomadas  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Qué medidas han tomado?</ion-label>
+            <ion-textarea type="text" rows="3" autocapitalize="off" required [(ngModel)]="hcl.medidas_tomadas">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- resultados medidas tomadas  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Qué resultados han obtenido?</ion-label>
+            <ion-textarea type="text" rows="3" autocapitalize="off" required [(ngModel)]="hcl.resultados_medidas">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

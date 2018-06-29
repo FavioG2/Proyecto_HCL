@@ -93,7 +93,7 @@ export class PacientePage {
       descripcion_problema: '',
       inicio_problema: '',
       actitud_encargado_problema: '',
-      existen_medidad: '',
+      existen_medidas: '',
       medidas_tomadas: '',
       resultados_medidas: '',
       nivel_socioeconomico: '',
@@ -183,7 +183,8 @@ export class PacientePage {
       fecha_nac_encargado: '',
       edad_encargado: '',
       profesion_encargado: '',
-      lugar_trabajo_encargado: ''
+      lugar_trabajo_encargado: '',
+      otra_area_dificultad:''
     }
 
   }

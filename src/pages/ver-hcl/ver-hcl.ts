@@ -6,7 +6,8 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 
 import {  hcl } from  '../../pages/clases/hcl';
 
-import { IdentificacionGeneralPage, IdentificacionEncargadosPage } from '../../pages/index.paginas';
+import { IdentificacionGeneralPage, IdentificacionEncargadosPage, MotivoConsultaPage,
+          HistoriaFamiliarPage} from '../../pages/index.paginas';
 
 /**
  * Generated class for the VerHclPage page.
@@ -46,6 +47,15 @@ export class VerHclPage {
   identificacion_encargados(){
     this.navCtrl.push(IdentificacionEncargadosPage);
   }
+
+  motivo_consulta(){
+    this.navCtrl.push(MotivoConsultaPage);
+  }
+
+  historia_familiar(){
+    this.navCtrl.push(HistoriaFamiliarPage);
+  }
+
   public end(){
     this.navCtrl.pop();
   }

@@ -23,8 +23,17 @@
     <button ion-button block class="top-20" color="primary" round outline (click) = "identificacion_general()">Datos del alumno</button>
   </ion-row>
   <ion-row>
-    <button ion-button block class="top-20" color="primary" round outline (click) = "identificacion_encargados()">Datos de encargados</button>
+    <button ion-button block color="primary" round outline (click) = "identificacion_encargados()">Datos de encargados</button>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round outline (click) = "motivo_consulta()">Motivo de la consulta</button>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round outline (click) = "historia_familiar()">Historia familiar</button>
   </ion-row>
     <!-- grid identificacion general -->
+    <ion-row>
+      <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+    </ion-row>
 
 </ion-content>
