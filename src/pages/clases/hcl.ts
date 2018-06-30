@@ -102,7 +102,7 @@ export class hcl{
   familia_psicosis:string;
   familia_otros:string;
   caracteristicas_emocionales:string;
-  caracteristicas_sueño:string;
+  caracteristicas_sueno:string;
   caracteristicas_sociales:string;
   caracteristicas_alimentacion:string;
   edad_control_esfinter_vesical_noche:string;

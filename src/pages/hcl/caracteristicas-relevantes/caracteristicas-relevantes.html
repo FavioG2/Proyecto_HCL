@@ -1,0 +1,112 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+  <ion-row>
+      <font color="#c91e52"><b >CARACTERÍSTICAS RELEVANTES DEL EVALUADO</b></font>
+  </ion-row>
+  <ion-row>
+      <font color="#c91e52">El padre o la madre responderán acerca del comportamiento de su hijo(a) en las siguientes categorías, marcar las presentes</font>
+  </ion-row>
+  <ion-row text-center> <!-- tipo parto -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Emocionales</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.caracteristicas_emocionales" multiple="true">
+            <ion-option>Tranquilo</ion-option>
+            <ion-option>Inquieto</ion-option>
+            <ion-option>Ansioso</ion-option>
+            <ion-option>Autoritario</ion-option>
+            <ion-option>Emotivo</ion-option>
+            <ion-option>Lábil</ion-option>
+            <ion-option>Estable</ion-option>
+            <ion-option>Seguro</ion-option>
+            <ion-option>Desconfiado</ion-option>
+            <ion-option>Alegre</ion-option>
+            <ion-option>Triste</ion-option>
+            <ion-option>Quejumbroso</ion-option>
+            <ion-option>Llorón</ion-option>
+            <ion-option>Miedoso</ion-option>
+            <ion-option>Sugestionable</ion-option>
+            <ion-option>Fobias</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- tipo parto -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Alimentación</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.caracteristicas_alimentacion" multiple="true">
+            <ion-option>Vómitos</ion-option>
+            <ion-option>Anorexia</ion-option>
+            <ion-option>Bulimia</ion-option>
+            <ion-option>Atracón</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- tipo parto -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Sueño</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.caracteristicas_sueno" multiple="true">
+            <ion-option>Insomnio</ion-option>
+            <ion-option>Pesadillas</ion-option>
+            <ion-option>Terrores</ion-option>
+            <ion-option>Sonambulismo</ion-option>
+            <ion-option>Hipersomnia</ion-option>
+            <ion-option>Otros</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- tipo parto -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Sociales y de conducta</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.caracteristicas_sociales" multiple="true">
+            <ion-option>Obediente</ion-option>
+            <ion-option>Desobediente</ion-option>
+            <ion-option>Independiente</ion-option>
+            <ion-option>Dependiente</ion-option>
+            <ion-option>Comunicativo</ion-option>
+            <ion-option>Introvertido</ion-option>
+              <ion-option>Extrovertido</ion-option>
+              <ion-option>Agresivo</ion-option>
+              <ion-option>Cooperador</ion-option>
+              <ion-option>Peleador</ion-option>
+              <ion-option>Retador</ion-option>
+              <ion-option>Negativo</ion-option>
+              <ion-option>Desafiante</ion-option>
+              <ion-option>Impredecible</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+
+</ion-content>

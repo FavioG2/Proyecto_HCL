@@ -8,7 +8,7 @@ import {  hcl } from  '../../pages/clases/hcl';
 
 import { IdentificacionGeneralPage, IdentificacionEncargadosPage, MotivoConsultaPage,
           HistoriaFamiliarPage, HistoriaEscolarPage, AntecedentesMadrePage,
-          PartoPage, PostNatalPage} from '../../pages/index.paginas';
+          PartoPage, PostNatalPage, CaracteristicasRelevantesPage} from '../../pages/index.paginas';
 
 /**
  * Generated class for the VerHclPage page.
@@ -71,6 +71,10 @@ export class VerHclPage {
 
   post_natal(){
     this.navCtrl.push(PostNatalPage);
+  }
+
+  caracteristicas_relevantes(){
+    this.navCtrl.push(CaracteristicasRelevantesPage);
   }
 
   public end(){

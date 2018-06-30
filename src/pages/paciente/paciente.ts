@@ -160,7 +160,7 @@ export class PacientePage {
       familia_psicosis: '',
       familia_otros: '',
       caracteristicas_emocionales: '',
-      caracteristicas_sueño: '',
+      caracteristicas_sueno: '',
       caracteristicas_sociales: '',
       caracteristicas_alimentacion: '',
       edad_control_esfinter_vesical_noche: '',
