@@ -108,5 +108,217 @@
       </ion-row>
     </ion-card>
   </ion-row>
-
+  <ion-row>
+      <font color="#c91e52"><b >CONTROL DE ESFÍNTERES</b></font>
+  </ion-row>
+  <ion-row>
+      <font color="#c91e52">Edad de control de esfínteres (años y/o meses)</font>
+  </ion-row>
+  <ion-row>
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col  col-6 offset-3 text-center>
+          <font color="#c8c8c8">Esfínter Vesical</font>
+        </ion-col>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Diurno</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.edad_control_esfinter_vesical_dia">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Nocturno</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.edad_control_esfinter_vesical_noche">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <ion-card id = "rounded">
+      <ion-row text-center>
+        <ion-col  col-6 offset-3 text-center>
+          <font color="#c8c8c8">Esfínter Anal</font>
+        </ion-col>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Diurno</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.edad_control_esfinter_anal_dia">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Nocturno</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.edad_control_esfinter_anal_noche">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+      <font color="#c91e52"><b >DESARROLLO MOTOR</b></font>
+  </ion-row>
+  <ion-row>
+    <ion-card id = "rounded">
+      <ion-row text-center>
+        <ion-col  col-6 offset-3 text-center>
+          <font color="#c8c8c8">Edad en la que...</font>
+        </ion-col>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Controló músculos del cuello</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.musculo_cuello">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Levantó la cabeza</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.levanto_cabeza">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Dio vuelta</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.dio_vuelta">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Se sentó</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.se_sento">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Gateó</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.gateo">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Se paró</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.paro">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Caminó</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.camino">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+      <font color="#c91e52"><b >DESARROLLO DEL LENGUAJE</b></font>
+  </ion-row>
+  <ion-row>
+    <ion-card id = "rounded">
+      <ion-row text-center>
+        <ion-col  col-6 offset-3 text-center>
+          <font color="#c8c8c8">Edad en la que presentó</font>
+        </ion-col>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Gorjeo</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.gorjeo">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Sonrisa</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.sonrisa">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Laleo</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.laleo">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Balbuceo</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.balbuceo">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Primeras palabras</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.primeras_palabras">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Frases de dos palabras</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.frases_dos_palabras">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Oraciones completas</ion-label>
+              <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.oraciones_completas">
+              </ion-input>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+  </ion-row>
 </ion-content>
