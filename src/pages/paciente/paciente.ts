@@ -67,6 +67,7 @@ export class PacientePage {
   crear_hcl(){
     console.log("creando hcl");
     this.vars.hcl = {
+      embarazos: '',
       clave: '',
       key : '',
       nombre: '',

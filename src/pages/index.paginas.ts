@@ -8,3 +8,4 @@ export { MotivoConsultaPage } from "./hcl/motivo-consulta/motivo-consulta";
 export { HistoriaFamiliarPage } from "./hcl/historia-familiar/historia-familiar";
 export { HistoriaEscolarPage } from "./hcl/historia-escolar/historia-escolar";
 export { AntecedentesMadrePage } from "./hcl/antecedentes-madre/antecedentes-madre";
+export { PartoPage } from "./hcl/parto/parto";

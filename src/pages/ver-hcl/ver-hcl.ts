@@ -7,7 +7,7 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 import {  hcl } from  '../../pages/clases/hcl';
 
 import { IdentificacionGeneralPage, IdentificacionEncargadosPage, MotivoConsultaPage,
-          HistoriaFamiliarPage, HistoriaEscolarPage} from '../../pages/index.paginas';
+          HistoriaFamiliarPage, HistoriaEscolarPage, AntecedentesMadrePage} from '../../pages/index.paginas';
 
 /**
  * Generated class for the VerHclPage page.
@@ -58,6 +58,10 @@ export class VerHclPage {
 
   historia_escolar(){
     this.navCtrl.push(HistoriaEscolarPage);
+  }
+
+  antecedentes_madre(){
+    this.navCtrl.push(AntecedentesMadrePage);
   }
 
   public end(){

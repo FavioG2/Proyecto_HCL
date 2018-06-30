@@ -13,5 +13,144 @@
     <ion-row>
         <font color="#c91e52"><b >ANTECEDENTES PERSONALES DE LA MADRE</b></font>
     </ion-row>
-
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Edad en la cual quedó embarazada</ion-label>
+            <ion-input type="number" autocapitalize="off" required [(ngModel)]="hcl.edad_embarazo">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Número de embarazos previos</ion-label>
+            <ion-input type="number" autocapitalize="off" required [(ngModel)]="hcl.embarazos">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Número de pérdidas</ion-label>
+            <ion-input  type="number" autocapitalize="off" required [(ngModel)]="hcl.perdidas">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- rendimiento-->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">El embarazo fue...</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.embarazo_deseado" multiple="true">
+              <ion-option>Planificado</ion-option>
+              <ion-option>Deseado</ion-option>
+              <ion-option>Rechazado</ion-option>
+              <ion-option>No planificado</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- rendimiento-->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">¿Hubo intento de aborto?</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.intento_aborto" multiple="true">
+              <ion-option>Si</ion-option>
+              <ion-option>No</ion-option>
+              <ion-option>Espontáneo</ion-option>
+              <ion-option>Provocado</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- rendimiento-->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">El embarazo fue...</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.tipo_embarazo" multiple="true">
+              <ion-option>Normal</ion-option>
+              <ion-option>Alto riesgo</ion-option>
+              <ion-option>A término</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Qué medicamentos utilizó?</ion-label>
+            <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.medicamentos_usados">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Qué anestesia se le administró?</ion-label>
+            <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.anestesia">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- adaptación  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>¿Tuvo control pre-natal?</ion-label>
+            <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.control_prenatal">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- rendimiento-->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">¿Consumió...?</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.consumos" multiple="true">
+              <ion-option>Alcohol</ion-option>
+              <ion-option>Cigarrillo</ion-option>
+              <ion-option>Otras drogas</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <font color="#c91e52">Tuvo altuna experiencia traumática como hemorragias, caídas, lesiones, impresiones fuertes</font>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Experiencia(s) traumática(s)</ion-label>
+            <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.traumas">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <font color="#c91e52">¿Padeció alguna enfermedad como Rubeola, Toxoplasmosis, infecciones, fiebres, Preclamsia, etc.?</font>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Describir el padecimiento</ion-label>
+            <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="hcl.enfermedades">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
 </ion-content>

@@ -65,6 +65,7 @@ export class hcl{
   peores_materias:string;
   relacion_maestros:string;
   edad_embarazo:string;
+  embarazos:string;
   perdidas:string;
   embarazo_deseado:string;
   intento_aborto:string;
