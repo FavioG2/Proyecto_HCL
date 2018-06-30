@@ -1,22 +1,14 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the PartoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { VerHclPage } from '../../../pages/index.paginas';
 
 @IonicPage()
 @Component({
   selector: 'page-parto',
   templateUrl: 'parto.html',
 })
-export class PartoPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+export class PartoPage extends VerHclPage{
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PartoPage');

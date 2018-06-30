@@ -1,18 +1,140 @@
-<!--
-  Generated template for the PartoPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>parto</ion-title>
+  <ion-navbar color = "primary">
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+    <ion-row>
+        <font color="#c91e52"><b >DETALLES DEL PARTO</b></font>
+    </ion-row>
+    <ion-row text-center> <!-- tipo parto -->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">El parto fue...</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.tipo_parto" multiple="false">
+              <ion-option>A término</ion-option>
+              <ion-option>Prematuro</ion-option>
+              <ion-option>Tardío</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- tipo parto -->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">El parto fue...</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.tipo_parto2" multiple="true">
+              <ion-option>Eutócico</ion-option>
+              <ion-option>Distócico</ion-option>
+              <ion-option>Cesárea</ion-option>
+              <ion-option>Simple</ion-option>
+              <ion-option>Múltiple</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- tiempo parto -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Tiempo de trabajo de parto</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.tiempo_parto">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row text-center> <!-- presentacion -->
+      <ion-card id = "rounded">
+        <ion-row>
+          <ion-col col-7>
+            <font color="#c8c8c8">Presentación del bebé</font>
+          </ion-col>
+          <ion-col>
+            <ion-select [(ngModel)]="hcl.presentacion_bebe" multiple="false">
+              <ion-option>Cefálica</ion-option>
+              <ion-option>Podálica</ion-option>
+              <ion-option>De nalgas</ion-option>
+              <ion-option>Otra posición</ion-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Tiempo que tardó en llorar</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.tiempo_llanto">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- complicaciones  -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Complicaciones del parto</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.complicaciones_parto" multiple="true">
+            <ion-option>Placenta previa</ion-option>
+            <ion-option>Anoxia</ion-option>
+            <ion-option>Hipoxia</ion-option>
+            <ion-option>Uso de fórceps</ion-option>
+            <ion-option>Ictericia</ion-option>
+            <ion-option>Cianosis</ion-option>
+            <ion-option>Cordón umbilical</ion-option>
+            <ion-option>Aspiración de meconeo</ion-option>
+            <ion-option>Membrana hialina</ion-option>
+            <ion-option>Malformaciones</ion-option>
+            <ion-option>Incompatibilidad factor RH</ion-option>
+            <ion-option>Otros</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Especifique otras complicaciones</ion-label>
+          <ion-textarea rows="2" type="text" autocapitalize="off" required [(ngModel)]="hcl.otras_complicaciones">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- tiempo parto -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Peso del niño al nacer</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.peso_nacer">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- tiempo parto -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Talla al nacer</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.talla_nacer">
+          </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+    <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+  </ion-row>
 </ion-content>

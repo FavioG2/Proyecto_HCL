@@ -1,0 +1,186 @@
+<ion-header>
+
+  <ion-navbar color = "primary">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+  <ion-row>
+      <font color="#c91e52"><b >PERÍODO POST NATAL Y PRIMERA INFANCIA</b></font>
+  </ion-row>
+    <font color="#c91e52">Terapias Especiales (fototerapia, exanguinotransfusión, terapia respiratoria, uso de incubadora, intervención quirúrgica, niño canguro)</font>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Terapias especiales</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.terapias_especiales">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row>  <!-- tipo lactancia -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+        <ion-label floating>Tipo de lactancia</ion-label>
+        <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.tipo_lactancia">
+        </ion-input>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- enfermedades -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Enfermedades y accidentes significativos.</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.enfermedades_significativas" multiple="true">
+            <ion-option>Asma</ion-option>
+            <ion-option>Meningitis</ion-option>
+            <ion-option>Encefalitis</ion-option>
+            <ion-option>Problemas auditivos</ion-option>
+            <ion-option>Problemas visuales</ion-option>
+            <ion-option>Enfermedades infecto contagiosas</ion-option>
+            <ion-option>Enfermedades bronco pulmonares</ion-option>
+            <ion-option>Hospitalizaciones</ion-option>
+            <ion-option>Pérdida de conciencia</ion-option>
+            <ion-option>Enfermedades cardíacas</ion-option>
+            <ion-option>Enfermedades renales</ion-option>
+            <ion-option>Enfermedades alérgicas</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Tratamientos farmacológicos recibidos</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.tratamientos_farmacologicos">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <font color="#c91e52">Hábitos alimenticios (horario, tipo de comida, gusto o rechazo por la comida)</font>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Hábitos alimenticios</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.habitos_alimenticios">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <font color="#c91e52">Hábitos de sueño (tipo de sueño, pesadillas, terrores nocturnos. bruxismo, sonambulismo etc.)</font>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Hábitos de sueño</ion-label>
+          <ion-textarea rows="3" type="text" autocapitalize="off" required [(ngModel)]="hcl.habitos_sueno">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row> <!-- otros -->
+    <ion-card id = "rounded">
+      <ion-item id = "rounded">
+          <ion-label floating>Registro de vacunas</ion-label>
+          <ion-textarea rows="2" type="text" autocapitalize="off" required [(ngModel)]="hcl.vacunas">
+          </ion-textarea>
+      </ion-item>
+    </ion-card>
+  </ion-row>
+  <ion-row text-center> <!-- tipo parto -->
+    <ion-card id = "rounded">
+      <ion-row>
+        <ion-col col-7>
+          <font color="#c8c8c8">Antecedentes neurológicos</font>
+        </ion-col>
+        <ion-col>
+          <ion-select [(ngModel)]="hcl.antecedentes_neurologicos" multiple="true">
+            <ion-option>Epilepsia</ion-option>
+            <ion-option>Convulsiones febriles</ion-option>
+            <ion-option>Traumatismo cráneo-encefálico</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <ion-row>
+      <font color="#c91e52"><b >ANTECEDENTES EN LA FAMILIA</b></font>
+  </ion-row>
+  <font color="#c91e52">Escriba si los trastornos mencionados tienen relación con algún miembro de la familia</font>
+  <ion-card id = "rounded">
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Trastornos de aprendizaje</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_aprendizaje">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Discapacidad intelectual</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_intelectual">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Trastornos del lenguaje</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_lenguaje">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Epilepsia</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_epilepsia">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Alcoholismo</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_alcoholismo">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Psicosis</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_psicosis">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>  <!-- tipo lactancia -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+          <ion-label floating>Otros</ion-label>
+          <ion-input type="text" autocapitalize="off" required [(ngModel)]="hcl.familia_otros">
+          </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+  </ion-card>
+  <ion-row>
+    <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+  </ion-row>
+</ion-content>

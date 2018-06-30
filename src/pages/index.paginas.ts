@@ -9,3 +9,4 @@ export { HistoriaFamiliarPage } from "./hcl/historia-familiar/historia-familiar"
 export { HistoriaEscolarPage } from "./hcl/historia-escolar/historia-escolar";
 export { AntecedentesMadrePage } from "./hcl/antecedentes-madre/antecedentes-madre";
 export { PartoPage } from "./hcl/parto/parto";
+export { PostNatalPage } from "./hcl/post-natal/post-natal";

@@ -77,10 +77,11 @@ export class hcl{
   traumas:string;
   enfermedades:string;
   estado_nutricional:string;
-  tipo_parto:string;
+  tipo_parto:string;//---------------------------------------------------------------------
   tiempo_parto:string;
   presentacion_bebe:string;
   tiempo_llanto:string;
+  tipo_parto2:string;
   complicaciones_parto:string;
   otras_complicaciones:string;
   peso_nacer:number;
@@ -88,9 +89,9 @@ export class hcl{
   terapias_especiales:string;
   tipo_lactancia:string;
   enfermedades_significativas:string;
-  tratamientos_farmacológicos:string;
+  tratamientos_farmacologicos:string;
   habitos_alimenticios:string;
-  habitos_sueño:string;
+  habitos_sueno:string;
   vacunas:string;
   antecedentes_neurologicos:string;
   familia_aprendizaje:string;

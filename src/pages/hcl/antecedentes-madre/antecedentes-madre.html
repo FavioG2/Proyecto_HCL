@@ -153,4 +153,26 @@
         </ion-item>
       </ion-card>
     </ion-row>
+    <ion-row text-center> <!-- actitud -->
+      <ion-card id = "rounded">
+        <font color="#c8c8c8">Estado nutricional de la madre</font>
+        <ion-row radio-group [(ngModel)]="hcl.actitud_institucion_educativa">
+          <ion-col>
+            <ion-item>
+              <ion-label>adecuado</ion-label>
+              <ion-radio value="adecuado"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>deficiente</ion-label>
+              <ion-radio value="deficiente"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <button ion-button block color="primary" round (click) = "guardar_hcl()">Guardar cambios</button>
+    </ion-row>
 </ion-content>
