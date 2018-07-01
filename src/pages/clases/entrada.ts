@@ -5,4 +5,5 @@ export class entrada{
   actividades:string;
   paciente:string;
   paciente_key:string;
+  email:string;
 }

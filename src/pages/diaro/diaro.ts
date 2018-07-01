@@ -7,6 +7,10 @@ import { Observable } from 'rxjs';
 
 import { EntradaPage } from "../../pages/index.paginas";
 
+import { entrada } from "../../pages/clases/entrada";
+
+
+
 /**
  * Generated class for the DiaroPage page.
  *
@@ -35,6 +39,21 @@ export class DiaroPage {
   }
 
   agregar_entrada(){
+    this.vars.entrada = {
+      dia:'',
+      hora:'',
+      key:'',
+      email:'',
+      actividades:'',
+      paciente:'',
+      paciente_key:''
+    };
+    this.vars.entrada.key = JSON.stringify(Date.now());
+    this.navCtrl.push(EntradaPage);
+  }
+
+  modificar(entrada:entrada){
+    this.vars.entrada = entrada;
     this.navCtrl.push(EntradaPage);
   }
 

@@ -7,13 +7,16 @@
 <ion-header>
 
   <ion-navbar color = "primary">
-    <ion-title>Nueva entrada</ion-title>
+    <ion-title>Entrada</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" [disabled] = "entry.dia == ''" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
+  </ion-fab>
   <ion-grid>
     <ion-row>
       <ion-card id = "rounded">
@@ -42,6 +45,6 @@
     </ion-row>
   </ion-grid>
   <ion-row>
-    <button ion-button block  color="primary" round (click)="guardar()">Añadir entrada</button>
+    <button ion-button block  color="primary" round (click)="guardar()">Guardar cambios</button>
   </ion-row>
 </ion-content>

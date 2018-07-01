@@ -41,7 +41,6 @@ export class ElegirPacientePage {
 
   imprimir(paciente:paciente){
     this.vars.paciente = paciente;
-    console.log(paciente.key);
     this.navCtrl.pop();
     this.navCtrl.push(PacientePage);
   }

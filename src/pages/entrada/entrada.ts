@@ -21,19 +21,13 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 })
 export class EntradaPage {
 
-  entry:entrada = {
-    dia:'',
-    hora:'',
-    key:'',
-    actividades:'',
-    paciente:'',
-    paciente_key:''
-  };
+  entry:entrada = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public vars : VariablesProvider,
               private almacenar : AlmacenarProvider) {
     //
+    this.entry = this.vars.entrada;
   }
 
   volver(){
@@ -42,15 +36,21 @@ export class EntradaPage {
 
   guardar(){
     if ( this.entry.dia != '' && this.entry.hora != '' && this.entry.actividades != ''){
-      this.entry.key = JSON.stringify(Date.now());
+
       this.entry.paciente = this.vars.paciente.nombre;
       this.entry.paciente_key = this.vars.paciente.key;
+      this.entry.email = this.vars.email;
       this.almacenar.guardar('diario', this.entry, this.entry.key);
       this.volver();
     }else{
       this.almacenar.showAlert("error", "debes llenar todos los campos");
     }
 
+  }
+
+  eliminar(){
+    this.almacenar.eliminar('diario', this.vars.entrada.key);
+    this.volver();
   }
 
   ionViewDidLoad() {

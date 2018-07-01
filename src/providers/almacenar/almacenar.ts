@@ -33,6 +33,19 @@ export class AlmacenarProvider {
     );
   }
 
+  eliminar ( coleccion : string, key : string ){
+    this.itemsCollection = this.afs.collection(coleccion);
+    this.itemsCollection.doc(key).delete().then(
+      result => {
+        this.showAlert('Registro', 'Registro eliminado exitosamente');
+      }
+    ).catch(
+      error => {
+        this.showAlert('Error', 'verifique la información ingresada y su conexión a internet');
+      }
+    );
+  }
+
   showAlert(title:string, subtitle:string) {
   const alert = this.alertCtrl.create({
     title: title,

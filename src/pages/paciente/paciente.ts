@@ -7,8 +7,9 @@ import { VariablesProvider } from '../../providers/variables/variables';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
-import { VerHclPage, DiaroPage } from "../../pages/index.paginas";
+import { VerHclPage, DiaroPage, PerfilCasoPage } from "../../pages/index.paginas";
 import { hcl } from '../../pages/clases/hcl';
+import{ perfil } from '../../pages/clases/perfil';
 /**
  * Generated class for the PacientePage page.
  *
@@ -25,16 +26,21 @@ export class PacientePage {
 //historias clinicas
   hclCollection: AngularFirestoreCollection<any>; //Firestore collection
   hcls: Observable<any[]>;
+
+  pcCollection: AngularFirestoreCollection<any>; //Firestore collection
+  pcs: Observable<any[]>;
   //hcl_paciente:hcl = new hcl();
   //area de hcl
   existe_hcl:boolean = false;
   texto_boton_hcl:string = "crear historia clínica";
+  texto_boton_perfil:string = "crear perfil de caso";
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private vars : VariablesProvider, private afs: AngularFirestore)
   {
 
     this.cargar_hcl();
+    this.cargar_perfil_caso();
   }
 
   ionViewDidLoad() {
@@ -65,7 +71,6 @@ export class PacientePage {
   }
 
   crear_hcl(){
-    console.log("creando hcl");
     this.vars.hcl = {
       embarazos: '',
       clave: '',
@@ -198,6 +203,50 @@ export class PacientePage {
   abrir_hcl(){
     this.navCtrl.push(VerHclPage);
   }
+
+  crear_perfil_caso(){
+    console.log("creando perfil");
+    this.vars.pc = {
+      clave:'',
+      key:'',
+      institucion:'',
+      fecha_observacion:'',
+      dificultades_basicas:'',
+      dificultades_academicas:'',
+      dificultades_conducta:'',
+      fortalezas_basicas:'',
+      fortalezas_academicas:'',
+      fortalezas_conducta:'',
+      criterio1:'',
+      criterio2:'',
+      criterio3:'',
+      criterio4:'',
+      criterio5:'',
+      observaciones:'',
+      autorizado:''
+    }
+  }
+
+  abrir_perfil_caso(){
+    this.navCtrl.push(PerfilCasoPage);
+  }
+
+  cargar_perfil_caso(){
+    this.pcCollection = this.afs.collection('perfilcaso', ref => ref.where('clave', '==', this.vars.paciente.key));
+    this.pcCollection.valueChanges().subscribe( value => {
+
+      if(value.length > 0){
+        this.texto_boton_perfil = "revisar o editar perfil de caso";
+        let pc:perfil = value[0];
+        this.vars.pc = pc;
+      }else{
+        this.crear_perfil_caso();
+        this.vars.pc.clave = this.vars.paciente.key;
+        this.vars.pc.key = JSON.stringify(Date.now());
+      }
+    });
+  }
+
 
   abrir_diario(){
     this.navCtrl.push(DiaroPage);
