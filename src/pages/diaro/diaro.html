@@ -22,12 +22,20 @@
         <ion-avatar item-left>
           <ion-icon name="archive"></ion-icon>
         </ion-avatar>
-
-        <h3><b>{{entrada.paciente}}</b></h3>
-        <h4>{{entrada.actividades}}</h4>
-
+        <ion-grid>
+          <ion-row>
+            <h4><b>Fecha: </b>{{entrada.dia}}, {{entrada.hora}}</h4>
+          </ion-row>
+          <ion-row>
+            <h4><b>Actividades: </b>{{entrada.actividades}}</h4>
+        </ion-row>
+        </ion-grid>
     </ion-item>
     </ion-card>
   </ion-list>
+
+  <ion-row>
+    <button ion-button block  color="primary" round (click)="agregar_entrada()">Añadir entrada</button>
+  </ion-row>
 
 </ion-content>

@@ -5,6 +5,8 @@ import { VariablesProvider } from '../../providers/variables/variables';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
+import { EntradaPage } from "../../pages/index.paginas";
+
 /**
  * Generated class for the DiaroPage page.
  *
@@ -28,8 +30,12 @@ export class DiaroPage {
   }
 
   cargar_entradas(){
-    this.diarioCollection = this.afs.collection('diario'/*, ref => ref.where('usuario', '==', this.vars.email)/* , ref => ref.where('nombre', '==', 'favio')/**/);
+    this.diarioCollection = this.afs.collection('diario', ref => ref.where('paciente_key', '==', this.vars.paciente.key)/* , ref => ref.where('nombre', '==', 'favio')/**/);
     this.entradas = this.diarioCollection.valueChanges();
+  }
+
+  agregar_entrada(){
+    this.navCtrl.push(EntradaPage);
   }
 
   ionViewDidLoad() {

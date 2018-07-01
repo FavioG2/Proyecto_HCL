@@ -1,0 +1,47 @@
+<!--
+  Generated template for the EntradaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = "primary">
+    <ion-title>Nueva entrada</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Fecha de la actividad</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="entry.dia"></ion-datetime>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Hora de la actividad</ion-label>
+          <ion-datetime displayFormat="hh:mm"  [(ngModel)]="entry.hora"></ion-datetime>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Actividades</ion-label>
+            <ion-textarea rows = "3" name="nombre" type="text" autocapitalize="off" required [(ngModel)]="entry.actividades">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <button ion-button block  color="primary" round (click)="guardar()">Añadir entrada</button>
+  </ion-row>
+</ion-content>
