@@ -15,5 +15,5 @@ export class perfil{
   criterio4:string;
   criterio5:string;
   observaciones:string;
-  autorizado:string;  
+  autorizado:string;
 }

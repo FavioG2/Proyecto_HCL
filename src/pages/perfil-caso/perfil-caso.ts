@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { VariablesProvider } from '../../providers/variables/variables';
+import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
+
+import {  perfil } from  '../../pages/clases/perfil';
+
 /**
  * Generated class for the PerfilCasoPage page.
  *
@@ -15,11 +20,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerfilCasoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public pc:perfil;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public vars: VariablesProvider,
+              public almacenar : AlmacenarProvider
+  ) {
+    this.pc = this.vars.pc;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilCasoPage');
+  }
+
+  public guardar_pc(){
+    this.almacenar.guardar('perfilcaso', this.pc, this.pc.key);
+  }
+
+  public salir(){
+    this.navCtrl.pop();
   }
 
 }

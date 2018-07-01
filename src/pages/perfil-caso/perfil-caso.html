@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>perfil_caso</ion-title>
+  <ion-navbar color = "primary">
+    <ion-title>perfil de Caso</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +15,161 @@
 
 <ion-content padding>
 
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "guardar_pc()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+        <font color="#c91e52"><b >DATOS GENERALES</b></font>
+    </ion-row>
+    <ion-row> <!-- edad inicio  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Institución</ion-label>
+            <ion-input type="text" autocapitalize="off" required [(ngModel)]="pc.institucion">
+            </ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Fecha de observacion</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="pc.fecha_observacion"></ion-datetime>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+          <font color="#c91e52"><b >DIFICULTADES QUE PRESENTA</b></font>
+    </ion-row>
+    <ion-row text-wrap>
+          <font color="#c91e52">colocar únicamente las dificultades observadas</font>
+    </ion-row>
+    <ion-card id = "rounded" text-center>
+      <br>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas básicas (Percepción, psicomotricidad, lenguaje, pensamiento)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas básicas</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.dificultades_basicas">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas académicas (Lectura, escritura, matemáticas)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas académicas</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.dificultades_academicas">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas de conducta (Agresividad, hiperactividad, seguimiento de instrucciones, otras)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas de conducta</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.dificultades_conducta">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+    <ion-row>
+          <font color="#c91e52"><b >FORTALEZAS QUE PRESENTA</b></font>
+    </ion-row>
+    <ion-row text-wrap>
+          <font color="#c91e52">colocar únicamente las fortalezas observadas</font>
+    </ion-row>
+    <ion-card id = "rounded" text-center>
+      <br>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas básicas (Percepción, psicomotricidad, lenguaje, pensamiento)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas básicas</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.fortalezas_basicas">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas académicas (Lectura, escritura, matemáticas)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas académicas</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.fortalezas_academicas">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Areas de conducta (Seguimiento de instrucciones, otras)</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Areas de conducta</ion-label>
+              <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.fortalezas_conducta">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+    <ion-row>
+          <font color="#c91e52"><b>CRITERIOS PARA EVALUARLO</b></font>
+    </ion-row>
+    <ion-card id = "rounded" text-center>
+      <br>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">. ¿Qué desea corroborar o bien descartar?</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Respuesta</ion-label>
+              <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="pc.criterio1">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+      <ion-row text-wrap>
+            <font color="#c8c8c8">Describir hipótesis diagnóstica</font>
+      </ion-row>
+      <ion-row> <!-- edad inicio  -->
+        <ion-card id = "rounded">
+          <ion-item id = "rounded">
+              <ion-label floating>Respuesta</ion-label>
+              <ion-textarea rows = "2" type="text" autocapitalize="off" required [(ngModel)]="pc.criterio2">
+              </ion-textarea>
+          </ion-item>
+        </ion-card>
+      </ion-row>
+    </ion-card>
+    <ion-row> <!-- edad inicio  -->
+      <ion-card id = "rounded">
+        <ion-item id = "rounded">
+            <ion-label floating>Observaciones</ion-label>
+            <ion-textarea rows = "3" type="text" autocapitalize="off" required [(ngModel)]="pc.observaciones">
+            </ion-textarea>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+  <ion-row>
+    <button ion-button block color="primary" round (click) = "guardar_pc()">Guardar cambios</button>
+  </ion-row>
 </ion-content>

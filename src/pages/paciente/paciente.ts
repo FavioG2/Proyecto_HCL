@@ -43,6 +43,10 @@ export class PacientePage {
     this.cargar_perfil_caso();
   }
 
+  salir(){
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PacientePage');
   }
