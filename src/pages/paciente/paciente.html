@@ -21,16 +21,25 @@
         </ion-col>
     </ion-row>
     <ion-row>
-      <button ion-button block  color="primary" round outline (click) = "abrir_hcl()">{{this.texto_boton_hcl}}</button>
+      <button ion-button block  color="primary" icon-left round outline (click) = "abrir_hcl()">
+        {{this.texto_boton_hcl}}
+      </button>
     </ion-row>
     <ion-row>
-      <button ion-button block  color="primary" round outline (click) = "abrir_perfil_caso()">{{this.texto_boton_perfil}}</button>
+      <button ion-button block  color="primary"icon-left  round outline (click) = "abrir_perfil_caso()">
+        {{this.texto_boton_perfil}}
+      </button>
     </ion-row>
     <ion-row>
-      <button ion-button block  color="primary" round outline (click) = "abrir_diario()">Diario pedagógico</button>
+      <button ion-button block  color="primary"icon-left  round outline (click) = "abrir_diario()">
+        Diario pedagógico
+      </button>
     </ion-row>
   </ion-grid>
   <ion-row>
-    <button ion-button block color="primary" round (click) = "salir()">Volver</button>
+    <button ion-button block color="primary" round icon-left (click) = "salir()">
+      <ion-icon name="exit"></ion-icon>
+      Volver
+    </button>
   </ion-row>
 </ion-content>
