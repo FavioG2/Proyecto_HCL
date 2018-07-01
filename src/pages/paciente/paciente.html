@@ -20,11 +20,12 @@
             <img style="max-width:100px;" [src]="this.vars.paciente.url_img">
         </ion-col>
     </ion-row>
-    <ion-col>
-      <ion-row>
-        <button ion-button block  color="primary" round outline (click) = "abrir_hcl()">{{this.texto_boton_hcl}}</button>
-      </ion-row>
-    </ion-col>
+    <ion-row>
+      <button ion-button block  color="primary" round outline (click) = "abrir_hcl()">{{this.texto_boton_hcl}}</button>
+    </ion-row>
+    <ion-row>
+      <button ion-button block  color="primary" round outline (click) = "abrir_diario()">Diario pedagógico</button>
+    </ion-row>
   </ion-grid>
 
 </ion-content>

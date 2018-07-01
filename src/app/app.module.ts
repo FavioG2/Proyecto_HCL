@@ -17,7 +17,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage, IdentificacionGeneralPage,
         IdentificacionEncargadosPage, MotivoConsultaPage, HistoriaFamiliarPage, HistoriaEscolarPage,
-        AntecedentesMadrePage, PartoPage, PostNatalPage, CaracteristicasRelevantesPage} from '../pages/index.paginas';
+        AntecedentesMadrePage, PartoPage, PostNatalPage, CaracteristicasRelevantesPage, DiaroPage} from '../pages/index.paginas';
 import { VariablesProvider } from '../providers/variables/variables';
 import { AlmacenarProvider } from '../providers/almacenar/almacenar';
 
@@ -38,7 +38,7 @@ export const firebaseConfig = {
     IdentificacionEncargadosPage,    MotivoConsultaPage,
     HistoriaFamiliarPage, HistoriaEscolarPage,
     AntecedentesMadrePage, PartoPage, PostNatalPage,
-    CaracteristicasRelevantesPage
+    CaracteristicasRelevantesPage, DiaroPage
   ],
   imports: [
     BrowserModule,
@@ -52,18 +52,15 @@ export const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    RegistroPacientePage,
-    ElegirPacientePage,
-    PacientePage,
-    VerHclPage,
-    IdentificacionGeneralPage,
+    MyApp,     HomePage,     RegistroPacientePage,
+    ElegirPacientePage,     PacientePage,
+    VerHclPage,    IdentificacionGeneralPage,
     IdentificacionEncargadosPage,
     MotivoConsultaPage,
     HistoriaFamiliarPage, HistoriaEscolarPage,
     AntecedentesMadrePage, PartoPage,
-    PostNatalPage, CaracteristicasRelevantesPage
+    PostNatalPage, CaracteristicasRelevantesPage,
+    DiaroPage
   ],
   providers: [
     StatusBar,

@@ -10,4 +10,5 @@ export { HistoriaEscolarPage } from "./hcl/historia-escolar/historia-escolar";
 export { AntecedentesMadrePage } from "./hcl/antecedentes-madre/antecedentes-madre";
 export { PartoPage } from "./hcl/parto/parto";
 export { PostNatalPage } from "./hcl/post-natal/post-natal";
-export { CaracteristicasRelevantesPage } from "./hcl/caracteristicas-relevantes/caracteristicas-relevantes"
+export { CaracteristicasRelevantesPage } from "./hcl/caracteristicas-relevantes/caracteristicas-relevantes";
+export { DiaroPage } from "./diaro/diaro"

@@ -7,7 +7,7 @@ import { VariablesProvider } from '../../providers/variables/variables';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
-import { VerHclPage } from "../../pages/index.paginas";
+import { VerHclPage, DiaroPage } from "../../pages/index.paginas";
 import { hcl } from '../../pages/clases/hcl';
 /**
  * Generated class for the PacientePage page.
@@ -197,5 +197,9 @@ export class PacientePage {
 
   abrir_hcl(){
     this.navCtrl.push(VerHclPage);
+  }
+
+  abrir_diario(){
+    this.navCtrl.push(DiaroPage);
   }
 }
