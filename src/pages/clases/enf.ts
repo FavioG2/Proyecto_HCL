@@ -2,6 +2,7 @@ export class enf{
   key:string;
   email:string;
   paciente:string;
+  padre:string;
   fecha:string;
   informacion_propia:number;
   informacion_otros:number;

@@ -23,53 +23,54 @@ export class CalcularEnfPage {
     email:'',
     paciente:'',
     fecha:'',
-    informacion_propia:null,
-    informacion_otros:null,
-    apoyo_emocional:null,
-    recursos_comunitarios:null,
-    recursos_economicos:null,
-    tiempo:null,
-    funcionamiento_familiar:null,
-    total:null
+    padre:'',
+    informacion_propia:4,
+    informacion_otros:4,
+    apoyo_emocional:4,
+    recursos_comunitarios:4,
+    recursos_economicos:4,
+    tiempo:4,
+    funcionamiento_familiar:4,
+    total:4
   }
 
   resp:respuestas = {
-    i1:null,
-    i2:null,
-    i3:null,
-    i4:null,
-    i5:null,
-    i6:null,
-    i7:null,
-    io1:null,
-    io2:null,
-    io3:null,
-    io4:null,
-    io5:null,
-    a1:null,
-    a2:null,
-    a3:null,
-    a4:null,
-    a5:null,
-    a6:null,
-    r1:null,
-    r2:null,
-    r3:null,
-    r4:null,
-    re1:null,
-    re2:null,
-    re3:null,
-    re4:null,
-    re5:null,
-    re6:null,
-    t1:null,
-    t2:null,
-    t3:null,
-    t4:null,
-    f1:null,
-    f2:null,
-    f3:null,
-    f4:null
+    i1:4,
+    i2:4,
+    i3:4,
+    i4:4,
+    i5:4,
+    i6:4,
+    i7:4,
+    io1:4,
+    io2:4,
+    io3:4,
+    io4:4,
+    io5:4,
+    a1:4,
+    a2:4,
+    a3:4,
+    a4:4,
+    a5:4,
+    a6:4,
+    r1:4,
+    r2:4,
+    r3:4,
+    r4:4,
+    re1:4,
+    re2:4,
+    re3:4,
+    re4:4,
+    re5:4,
+    re6:4,
+    t1:4,
+    t2:4,
+    t3:4,
+    t4:4,
+    f1:4,
+    f2:4,
+    f3:4,
+    f4:4
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -81,6 +82,13 @@ export class CalcularEnfPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalcularEnfPage');
+  }
+
+  calcular(){
+    let informacion_propia:number = Number(this.resp.i1) + Number(this.resp.i2) + Number(this.resp.i3) + Number(this.resp.i4) + Number(this.resp.i5) + Number(this.resp.i6) + Number(this.resp.i7);
+    let informacion_otros:number = Number(this.resp.io1) + Number(this.resp.io2) + Number(this.resp.io3) + Number(this.resp.io4) + Number(this.resp.io5);
+    console.log(informacion_propia);
+    console.log(informacion_otros);
   }
 
 }
