@@ -7,7 +7,7 @@ import { VariablesProvider } from '../../providers/variables/variables';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
-import { VerHclPage, DiaroPage, PerfilCasoPage } from "../../pages/index.paginas";
+import { VerHclPage, DiaroPage, PerfilCasoPage, EnfPage } from "../../pages/index.paginas";
 import { hcl } from '../../pages/clases/hcl';
 import{ perfil } from '../../pages/clases/perfil';
 /**
@@ -74,7 +74,9 @@ export class PacientePage {
       });
   }
 
-  abrir_enf(){}
+  abrir_enf(){
+    this.navCtrl.push(EnfPage);
+  }
 
   crear_hcl(){
     this.vars.hcl = {
