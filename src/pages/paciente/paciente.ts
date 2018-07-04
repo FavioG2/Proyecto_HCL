@@ -74,6 +74,8 @@ export class PacientePage {
       });
   }
 
+  abrir_enf(){}
+
   crear_hcl(){
     this.vars.hcl = {
       embarazos: '',
