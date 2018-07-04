@@ -17,7 +17,6 @@ export class VariablesProvider {
   public paciente:paciente = null;
   public entrada:entrada = null;
   public pc:perfil = null;
-
   public hcl:hcl;
 
   constructor() {

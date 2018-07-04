@@ -19,8 +19,35 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Registrar fecha</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="paciente.fecha_nac"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="enf.fecha"></ion-datetime>
         </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+        <font color="#c91e52"><b >INFORMACIÓN PROPIA</b></font>
+    </ion-row>
+    <ion-row text-center> <!-- genero -->
+      <ion-card id = "rounded">
+        <ion-row radio-group [(ngModel)]="hcl.genero">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
       </ion-card>
     </ion-row>
   </ion-grid>
