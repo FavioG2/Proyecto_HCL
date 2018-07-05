@@ -20,7 +20,8 @@ export class VariablesProvider {
   public pc:perfil = null;
   public hcl:hcl;
   public enf:enf;
-
+  public fechas:Array<string>;
+  public notas:Array<number>;
   constructor() {
     console.log('Hello VariablesProvider Provider');
   }

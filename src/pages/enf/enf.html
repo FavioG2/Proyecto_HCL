@@ -19,22 +19,39 @@
 
       <ion-card id="rounded" *ngFor="let enf of enfs | async" (click) = "abrir(enf)">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(total(enf.total))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Fecha: </b>{{enf.fecha}}</h4>
             </ion-row>
-            <ion-row text-wrap>
-              <ion-item>
+            <ion-row>
                 <h4><b>Persona entrevistada: </b>{{enf.padre}}</h4>
-              </ion-item>
+          </ion-row>
+          <ion-row>
+            <br>
+          </ion-row>
+          <ion-row>
+            <h4><b>PUNTUACIÓN TOTAL</b></h4>
+          </ion-row>
+          <ion-row text-wrap>
+              <h4><b>Nota obtenida: </b>{{enf.total}}</h4>
+          </ion-row>
+          <ion-row>
+                <h4><b>Indice de necesidad: </b>{{total(enf.total)}}</h4>
           </ion-row>
           </ion-grid>
       </ion-item>
       </ion-card>
     </ion-list>
-
     <ion-row>
-      <button ion-button block class="top-5" color="primary" icon-left round>
+      <button ion-button block class="top-5" color="primary" icon-left round outline (click)="graficar()">
+        Ver Gráfico E.N.F.
+      </button>
+    </ion-row>
+    <ion-row>
+      <button ion-button block class="top-5" color="primary" icon-left round (click)="calcular()">
         Calcular nuevo E.N.F.
       </button>
     </ion-row>

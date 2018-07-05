@@ -14,6 +14,9 @@
 
 
 <ion-content padding>
+  <ion-fab top right edge>
+    <button ion-fab mini color = "secondary" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
+  </ion-fab>
   <ion-grid>
     <ion-card id = "rounded">
       <ion-item >
@@ -30,7 +33,11 @@
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
+
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(informacion_propia(enf.informacion_propia))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Información propia</b></h4>
@@ -39,112 +46,150 @@
                 <h4><b>Nota obtenida: </b>{{enf.informacion_propia}}</h4>
           </ion-row>
           <ion-row>
-            <ion-col>
-              <h4><b>Indice de necesidad: </b>{{informacion_propia(enf.informacion_propia)}}</h4>
-            </ion-col>
-            <ion-col>
-              <ion-icon [name] = "icono(informacion_propia(enf.informacion_propia))"
-                        [color] = "color(informacion_propia(enf.informacion_propia))"></ion-icon>
-            </ion-col>
+
+                <h4><b>Indice de necesidad: </b>{{informacion_propia(enf.informacion_propia)}}</h4>
+
           </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(informacion_otros(enf.informacion_otros))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
-              <h4><b>información otros</b></h4>
+              <h4><b>Información a otros</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.informacion_otros}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.informacion_otros}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{informacion_otros(enf.informacion_otros)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(apoyo_emocional(enf.apoyo_emocional))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Apoyo emocional</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.apoyo_emocional}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.apoyo_emocional}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{apoyo_emocional(enf.apoyo_emocional)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(recursos_comunitarios(enf.recursos_comunitarios))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
-              <h4><b>recursos comunitarios</b></h4>
+              <h4><b>Recursos comunitarios</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.recursos_comunitarios}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.recursos_comunitarios}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{recursos_comunitarios(enf.recursos_comunitarios)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(recursos_economicos(enf.recursos_economicos))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Recursos económicos</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.recursos_economicos}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.recursos_economicos}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{recursos_economicos(enf.recursos_economicos)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(tiempo(enf.tiempo))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Tiempo</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.tiempo}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.tiempo}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{tiempo(enf.tiempo)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(funcionamiento_familiar(enf.funcionamiento_familiar))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>Funcionamiento familiar</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.funcionamiento_familiar}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.funcionamiento_familiar}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{funcionamiento_familiar(enf.funcionamiento_familiar)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>
     <ion-card id = "rounded">
       <ion-item >
+        <ion-avatar item-left>
+          <img [src]="icono(total(enf.total))" style="max-width:40px;" >
+        </ion-avatar>
           <ion-grid>
             <ion-row>
               <h4><b>PUNTUACIÓN TOTAL</b></h4>
             </ion-row>
             <ion-row text-wrap>
-              <ion-item>
-                <h4>{{enf.total}}</h4>
-              </ion-item>
-          </ion-row>
+                <h4><b>Nota obtenida: </b>{{enf.total}}</h4>
+            </ion-row>
+            <ion-row>
+
+                  <h4><b>Indice de necesidad: </b>{{total(enf.total)}}</h4>
+
+            </ion-row>
           </ion-grid>
       </ion-item>
     </ion-card>

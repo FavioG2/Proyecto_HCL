@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VariablesProvider } from '../../providers/variables/variables';
-
+import { AlmacenarProvider } from '../../providers/almacenar/almacenar';
 import { enf } from "../../pages/clases/enf";
 
 @IonicPage()
@@ -14,7 +14,7 @@ export class ResultadoEnfPage {
   enf:enf;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public vars : VariablesProvider)
+              public vars : VariablesProvider, public almacenar : AlmacenarProvider)
   {
     this.enf = this.vars.enf;
   }
@@ -23,27 +23,32 @@ export class ResultadoEnfPage {
     console.log('ionViewDidLoad ResultadoEnfPage');
   }
 
+  eliminar(){
+    this.almacenar.eliminar('enf', this.enf.key);
+    this.navCtrl.pop();
+  }
+
   color(indice:string){
     if(indice == "bajo"){
-      return("#50EA1A");
+      return("verde");
     }
     else if(indice == "medio"){
-      return("#F4F711");
+      return("amarillo");
     }
     else if(indice == "alto"){
-      return("#FF4D19");
+      return("rojo");
     }
   }
 
   icono(indice:string){
     if(indice == "bajo"){
-      return("checkmark-circle");
+      return("./assets/imgs/bajo.png");
     }
     else if(indice == "medio"){
-      return("alert");
+      return("./assets/imgs/medio.png");
     }
     else if(indice == "alto"){
-      return("close-circle");
+      return("./assets/imgs/alto.png");
     }
   }
 

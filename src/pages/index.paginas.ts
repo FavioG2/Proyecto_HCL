@@ -17,3 +17,5 @@ export { PerfilCasoPage } from "./perfil-caso/perfil-caso";
 export { EnfPage } from "./enf/enf";
 export { CalcularEnfPage } from "./calcular-enf/calcular-enf"
 export { ResultadoEnfPage } from "./resultado-enf/resultado-enf";
+export { DiaroGeneralPage } from "./diaro-general/diaro-general";
+export { GraficoPage } from "./grafico/grafico";

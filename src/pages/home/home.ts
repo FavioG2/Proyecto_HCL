@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 
-import { RegistroPacientePage, ElegirPacientePage } from "../index.paginas";
+import { RegistroPacientePage, ElegirPacientePage, DiaroGeneralPage } from "../index.paginas";
 
 @Component({
   selector: 'page-home',
@@ -25,6 +25,10 @@ export class HomePage {
 
   ir_a_elegir(){
     this.navCtrl.push(ElegirPacientePage);
+  }
+
+  ir_a_general(){
+    this.navCtrl.push(DiaroGeneralPage)
   }
 
 }
