@@ -18,7 +18,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage, IdentificacionGeneralPage,
         IdentificacionEncargadosPage, MotivoConsultaPage, HistoriaFamiliarPage, HistoriaEscolarPage,
         AntecedentesMadrePage, PartoPage, PostNatalPage, CaracteristicasRelevantesPage, DiaroPage,
-        EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage} from '../pages/index.paginas';
+        EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage, ResultadoEnfPage} from '../pages/index.paginas';
 import { VariablesProvider } from '../providers/variables/variables';
 import { AlmacenarProvider } from '../providers/almacenar/almacenar';
 
@@ -40,7 +40,8 @@ export const firebaseConfig = {
     HistoriaFamiliarPage, HistoriaEscolarPage,
     AntecedentesMadrePage, PartoPage, PostNatalPage,
     CaracteristicasRelevantesPage, DiaroPage, EntradaPage,
-    PerfilCasoPage, EnfPage, CalcularEnfPage
+    PerfilCasoPage, EnfPage, CalcularEnfPage,
+    ResultadoEnfPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +63,8 @@ export const firebaseConfig = {
     HistoriaFamiliarPage, HistoriaEscolarPage,
     AntecedentesMadrePage, PartoPage,
     PostNatalPage, CaracteristicasRelevantesPage,
-    DiaroPage, EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage
+    DiaroPage, EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage,
+    ResultadoEnfPage
   ],
   providers: [
     StatusBar,

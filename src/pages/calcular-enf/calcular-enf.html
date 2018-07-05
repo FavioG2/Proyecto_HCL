@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <ion-grid>
+  <ion-grid >
     <ion-row>
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
@@ -392,10 +392,645 @@
         </ion-row>
       </ion-card>
     </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más amigos con los que poder hablar</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.a2">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me  gustaría tener más oportunidades de reunirme y hablar con otros padres de niños con discapacidad</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.a3">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más tiempo para hablar con el terapeuta de mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.a4">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener consultas periódicas con un psicólogo para hablar de los problemas</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.a5">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría leer material a cerca de otros padres que tienen un niño similar al mío</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.a6">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+        <font color="#c91e52"><br><b >RECURSOS COMUNITARIOS</b></font>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría encontrar un servicio médico que conozca mis necesidades y las de mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.r1">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría encontrar una persona que sea capaz de cuidar a mi hijo de forma habitual</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.r2">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría encontrar una persona que sea capaz de cuidar a mi hijo en situaciones puntuales (ocio, compras...)</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.r3">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría encontrar una guardería o escuela infantil adecuada a las necesidades de mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.r4">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+        <font color="#c91e52"><br><b >RECURSOS ECONÓMICOS</b></font>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Necesito ayuda para pagar gastos de alquiler, hipoteca, cuidados médicos, vestido o transporte</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re1">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Necesito ayuda para comprar material especial para las necesidades de mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re2">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Necesito ayuda para pagar la guardería u otros servicios que necesita mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re3">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Yo o mi esposo(a) necesitaríamos ayuda y orientación para encontrar un trabajo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re4">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Necesito ayuda económica para pagar a una persona que atienda a mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re5">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Necesito ayuda para pagar los juguetes que mi hijo necesita</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.re6">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+        <font color="#c91e52"><br><b >TIEMPO</b></font>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más tiempo para estar con mi hijo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.t1">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más tiempo para estar con mi pareja</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.t2">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más tiempo para mí mismo</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.t3">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Me gustaría tener más tiempo para estar con mis amigos</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.t4">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+        <font color="#c91e52"><br><b >FUNCIONAMIENTO FAMILIAR</b></font>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Nuestra familia necesita ayuda para discutir los problemas y encontrar soluciones</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.f1">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Nuestra familia necesita ayuda para aprender a apoyarnos unos a otros cuando hay dificultades</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.f2">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Nuestra familia necesita ayuda para decidir quién y cómo organizar las tareas habituales de crianza del niño</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.f3">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
+    <ion-row> <!-- genero -->
+      <ion-card >
+        <ion-row text-wrap>
+            <font color="#848484">Nuestra familia necesita ayuda para decidir y hacer actividades de ocio y tiempo libre</font>
+        </ion-row>
+        <ion-row radio-group [(ngModel)]="resp.f4">
+          <ion-col>
+            <ion-item>
+              <ion-label>Si</ion-label>
+              <ion-radio value="2"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>¿?</ion-label>
+              <ion-radio value="1"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+             <ion-label>No</ion-label>
+              <ion-radio value="0"></ion-radio>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-row>
     <ion-row>
       <button ion-button block color="primary" round (click) = "calcular()">Calcular ENF</button>
     </ion-row>
   </ion-grid>
+
+
   <ion-row>
       <font color="#c8c8c8">Baily & Simeonson (1988), adaptada por A. Javier González García</font>
   </ion-row>

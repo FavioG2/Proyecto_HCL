@@ -16,3 +16,4 @@ export { EntradaPage } from "./entrada/entrada";
 export { PerfilCasoPage } from "./perfil-caso/perfil-caso";
 export { EnfPage } from "./enf/enf";
 export { CalcularEnfPage } from "./calcular-enf/calcular-enf"
+export { ResultadoEnfPage } from "./resultado-enf/resultado-enf";

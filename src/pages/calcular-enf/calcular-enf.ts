@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { enf } from '../../pages/clases/enf';
 import { VariablesProvider } from '../../providers/variables/variables';
+import { AlmacenarProvider} from '../../providers/almacenar/almacenar';
+
+import { ResultadoEnfPage } from '../../pages/index.paginas';
 
 /**
  * Generated class for the CalcularEnfPage page.
@@ -17,6 +20,8 @@ import { VariablesProvider } from '../../providers/variables/variables';
   templateUrl: 'calcular-enf.html',
 })
 export class CalcularEnfPage {
+
+  registrado:boolean = false;
 
   enf:enf = {
     key:'',
@@ -74,7 +79,8 @@ export class CalcularEnfPage {
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public vars : VariablesProvider ) {
+              public vars : VariablesProvider,
+              public almacenar : AlmacenarProvider) {
     this.enf.key = JSON.stringify(Date.now());
     this.enf.email = vars.email;
     this.enf.paciente = vars.paciente.key;
@@ -85,12 +91,69 @@ export class CalcularEnfPage {
   }
 
   calcular(){
-    let informacion_propia:number = Number(this.resp.i1) + Number(this.resp.i2) + Number(this.resp.i3) + Number(this.resp.i4) + Number(this.resp.i5) + Number(this.resp.i6) + Number(this.resp.i7);
-    let informacion_otros:number = Number(this.resp.io1) + Number(this.resp.io2) + Number(this.resp.io3) + Number(this.resp.io4) + Number(this.resp.io5);
-    console.log(informacion_propia);
-    console.log(informacion_otros);
-  }
 
+    if(
+      this.enf.padre == '' ||
+      this.enf.fecha == '' ||
+      this.resp.i1 == 4 ||
+      this.resp.i2 == 4 ||
+      this.resp.i3 == 4 ||
+      this.resp.i4 == 4 ||
+      this.resp.i5 == 4 ||
+      this.resp.i6 == 4 ||
+      this.resp.i7 == 4 ||
+      this.resp.io1 == 4 ||
+      this.resp.io2 == 4 ||
+      this.resp.io3 == 4 ||
+      this.resp.io4 == 4 ||
+      this.resp.io5 == 4 ||
+      this.resp.a1 == 4 ||
+      this.resp.a2 == 4 ||
+      this.resp.a3 == 4 ||
+      this.resp.a4 == 4 ||
+      this.resp.a5 == 4 ||
+      this.resp.a6 == 4 ||
+      this.resp.r1 == 4 ||
+      this.resp.r2 == 4 ||
+      this.resp.r3 == 4 ||
+      this.resp.r4 == 4 ||
+      this.resp.re1 == 4 ||
+      this.resp.re2 == 4 ||
+      this.resp.re3 == 4 ||
+      this.resp.re4 == 4 ||
+      this.resp.re5 == 4 ||
+      this.resp.re6 == 4 ||
+      this.resp.t1 == 4 ||
+      this.resp.t2 == 4 ||
+      this.resp.t3 == 4 ||
+      this.resp.t4 == 4 ||
+      this.resp.f1 == 4 ||
+      this.resp.f2 == 4 ||
+      this.resp.f3 == 4 ||
+      this.resp.f4 == 4
+    ){
+      this.almacenar.showAlert("Error", "Por favor complete el formulario antes de realizar el cálculo");
+    }
+    else {
+      this.registrado = true;
+      this.enf.informacion_propia = Number(this.resp.i1) + Number(this.resp.i2) + Number(this.resp.i3) + Number(this.resp.i4) + Number(this.resp.i5) + Number(this.resp.i6) + Number(this.resp.i7);
+      this.enf.informacion_otros = Number(this.resp.io1) + Number(this.resp.io2) + Number(this.resp.io3) + Number(this.resp.io4) + Number(this.resp.io5);
+      this.enf.apoyo_emocional = Number(this.resp.a1) + Number(this.resp.a2) + Number(this.resp.a3) + Number(this.resp.a4) + Number(this.resp.a5) + Number(this.resp.a6);
+      this.enf.recursos_comunitarios = Number(this.resp.r1) +  Number(this.resp.r2) +  Number(this.resp.r3) +  Number(this.resp.r4);
+      this.enf.recursos_economicos = Number(this.resp.re1) + Number(this.resp.re2) + Number(this.resp.re3) + Number(this.resp.re4) + Number(this.resp.re5) + Number(this.resp.re6);
+      this.enf.tiempo = Number(this.resp.t1) + Number(this.resp.t2) + Number(this.resp.t3) + Number(this.resp.t4);
+      this.enf.funcionamiento_familiar = Number(this.resp.f1) + Number(this.resp.f2) + Number(this.resp.f3) + Number(this.resp.f4);
+      this.enf.total = this.enf.informacion_propia + this.enf.informacion_otros + this.enf.apoyo_emocional
+                      + this.enf.recursos_economicos + this.enf.recursos_comunitarios + this.enf.tiempo + this.enf.funcionamiento_familiar;
+
+      console.log(this.enf.total);
+      this.vars.enf = this.enf;
+      this.almacenar.guardar('enf', this.enf, this.enf.key);
+      this.navCtrl.pop();
+      this.navCtrl.push(ResultadoEnfPage);
+    }
+
+  }
 }
 
 class respuestas{

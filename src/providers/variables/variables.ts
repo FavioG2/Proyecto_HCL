@@ -3,6 +3,7 @@ import { paciente } from "../../pages/clases/pacientes";
 import { hcl } from '../../pages/clases/hcl';
 import { entrada } from '../../pages/clases/entrada';
 import { perfil } from "../../pages/clases/perfil";
+import { enf } from "../../pages/clases/enf";
 
 /*
   Generated class for the VariablesProvider provider.
@@ -18,6 +19,7 @@ export class VariablesProvider {
   public entrada:entrada = null;
   public pc:perfil = null;
   public hcl:hcl;
+  public enf:enf;
 
   constructor() {
     console.log('Hello VariablesProvider Provider');

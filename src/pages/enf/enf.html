@@ -15,8 +15,26 @@
 
 <ion-content padding>
   <ion-grid>
+    <ion-list>
+
+      <ion-card id="rounded" *ngFor="let enf of enfs | async" (click) = "abrir(enf)">
+      <ion-item >
+          <ion-grid>
+            <ion-row>
+              <h4><b>Fecha: </b>{{enf.fecha}}</h4>
+            </ion-row>
+            <ion-row text-wrap>
+              <ion-item>
+                <h4><b>Persona entrevistada: </b>{{enf.padre}}</h4>
+              </ion-item>
+          </ion-row>
+          </ion-grid>
+      </ion-item>
+      </ion-card>
+    </ion-list>
+
     <ion-row>
-      <button ion-button block class="top-5" color="primary" icon-left round outline (click) = "calcular()">
+      <button ion-button block class="top-5" color="primary" icon-left round>
         Calcular nuevo E.N.F.
       </button>
     </ion-row>
