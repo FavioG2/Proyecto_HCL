@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { entrada } from "../../pages/clases/entrada";
 
@@ -25,7 +25,8 @@ export class EntradaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public vars : VariablesProvider,
-              private almacenar : AlmacenarProvider) {
+              private almacenar : AlmacenarProvider,
+              public alertCtrl : AlertController ) {
     //
     this.entry = this.vars.entrada;
   }
@@ -49,8 +50,26 @@ export class EntradaPage {
   }
 
   eliminar(){
-    this.almacenar.eliminar('diario', this.vars.entrada.key);
-    this.volver();
+    let alert = this.alertCtrl.create({
+        title: 'Eliminar entrada',
+        message: 'Estás seguro de que deseas eliminar esta entrada del diario?',
+        buttons: [
+            {
+                text: 'No',
+                handler: () => {
+                    console.log('Cancelado');
+                }
+            },
+            {
+                text: 'Si',
+                handler: () => {
+                  this.almacenar.eliminar('diario', this.vars.entrada.key);
+                  this.volver();
+                }
+            }
+        ]
+    })
+    alert.present();
   }
 
   ionViewDidLoad() {

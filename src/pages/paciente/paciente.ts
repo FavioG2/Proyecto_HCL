@@ -7,7 +7,7 @@ import { VariablesProvider } from '../../providers/variables/variables';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
-import { VerHclPage, DiaroPage, PerfilCasoPage, EnfPage } from "../../pages/index.paginas";
+import { VerHclPage, DiaroPage, PerfilCasoPage, EnfPage, RegistroPacientePage } from "../../pages/index.paginas";
 import { hcl } from '../../pages/clases/hcl';
 import{ perfil } from '../../pages/clases/perfil';
 /**
@@ -45,6 +45,10 @@ export class PacientePage {
 
   salir(){
     this.navCtrl.pop();
+  }
+
+  editar(){
+    this.navCtrl.push(RegistroPacientePage);
   }
 
   ionViewDidLoad() {

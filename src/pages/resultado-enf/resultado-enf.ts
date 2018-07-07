@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VariablesProvider } from '../../providers/variables/variables';
 import { AlmacenarProvider } from '../../providers/almacenar/almacenar';
 import { enf } from "../../pages/clases/enf";
@@ -14,7 +14,8 @@ export class ResultadoEnfPage {
   enf:enf;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public vars : VariablesProvider, public almacenar : AlmacenarProvider)
+              public vars : VariablesProvider, public almacenar : AlmacenarProvider,
+              public alertCtrl : AlertController)
   {
     this.enf = this.vars.enf;
   }
@@ -24,8 +25,25 @@ export class ResultadoEnfPage {
   }
 
   eliminar(){
-    this.almacenar.eliminar('enf', this.enf.key);
-    this.navCtrl.pop();
+    let alert = this.alertCtrl.create({
+        title: 'Eliminar ENF',
+        message: 'Estás seguro de que deseas eliminar este cálculo de ENF?',
+        buttons: [
+            {
+                text: 'No',
+                handler: () => {
+                    console.log('Cancelado');
+                }
+            },
+            {
+                text: 'Si',
+                handler: () => {
+                  this.almacenar.eliminar('enf', this.enf.key);
+                  this.navCtrl.pop();
+                }
+            }
+        ]
+    })
   }
 
   color(indice:string){

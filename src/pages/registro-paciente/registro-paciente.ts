@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 
 
 import { VariablesProvider } from '../../providers/variables/variables';
@@ -23,7 +23,8 @@ export class RegistroPacientePage {
               public navParams: NavParams,
               public vars : VariablesProvider,
               private almacenar : AlmacenarProvider,
-              public loadingCtrl: LoadingController) {
+              public loadingCtrl: LoadingController,
+              public alertCtrl : AlertController) {
   }
 
   ionViewDidLoad() {
@@ -34,30 +35,50 @@ export class RegistroPacientePage {
     this.navCtrl.pop();
   }
 
-    paciente: paciente = {
-      nombre : '',
-      fecha_nac : '',
-      edad : null,
-      url_img : '',
-      motivo : '',
-      usuario :  '',
-      key :  ''
-    };
+    paciente: paciente = this.vars.paciente;
 
   registrar(){
-    this.paciente.url_img =  'https://www.newfieldconsulting.com/wp-content/uploads/2014/07/perfil.jpg';
-    this.paciente.usuario = this.vars.email;
-    this.paciente.key = JSON.stringify(Date.now());
+
     if ( this.paciente.nombre != '' && this.paciente.fecha_nac != ''
         && this.paciente.edad != null && this.paciente.motivo != ''){
       this.almacenar.guardar('pacientes', this.paciente, this.paciente.key);
-      this.vars.paciente = this.paciente;
       this.presentLoadingDefault('Almacenando información');
       this.navCtrl.pop();
-      this.navCtrl.push(PacientePage);
+      if(this.navCtrl.length()<3){
+        this.navCtrl.push(PacientePage);
+      }
     } else {
       this.almacenar.showAlert("error", "debes llenar todos los campos");
     }
+  }
+
+  eliminar(){
+    let alert = this.alertCtrl.create({
+        title: 'Eliminar paciente',
+        message: 'Estás seguro de que deseas eliminar a ' + this.vars.paciente.nombre +'?',
+        buttons: [
+            {
+                text: 'No',
+                handler: () => {
+                    console.log('Cancelado');
+                }
+            },
+            {
+                text: 'Si',
+                handler: () => {
+                  this.almacenar.eliminar('pacientes', this.vars.paciente.key);
+                  if(this.navCtrl.length()>=3){
+                    this.navCtrl.pop();
+                  }
+                  this.navCtrl.pop();
+                }
+            }
+        ]
+    })
+    alert.present();
+
+
+
   }
 
   presentLoadingDefault(contenido: string) {
