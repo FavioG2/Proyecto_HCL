@@ -14,11 +14,16 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
+//pluginns
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Camera} from '@ionic-native/camera';
 
+//paginas
 import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage, IdentificacionGeneralPage,
         IdentificacionEncargadosPage, MotivoConsultaPage, HistoriaFamiliarPage, HistoriaEscolarPage,
         AntecedentesMadrePage, PartoPage, PostNatalPage, CaracteristicasRelevantesPage, DiaroPage,
-        EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage, ResultadoEnfPage, DiaroGeneralPage, GraficoPage} from '../pages/index.paginas';
+        EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage, ResultadoEnfPage, DiaroGeneralPage, GraficoPage,
+        SubirPage} from '../pages/index.paginas';
 import { VariablesProvider } from '../providers/variables/variables';
 import { AlmacenarProvider } from '../providers/almacenar/almacenar';
 
@@ -41,7 +46,7 @@ export const firebaseConfig = {
     AntecedentesMadrePage, PartoPage, PostNatalPage,
     CaracteristicasRelevantesPage, DiaroPage, EntradaPage,
     PerfilCasoPage, EnfPage, CalcularEnfPage,
-    ResultadoEnfPage, DiaroGeneralPage, GraficoPage
+    ResultadoEnfPage, DiaroGeneralPage, GraficoPage, SubirPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +69,7 @@ export const firebaseConfig = {
     AntecedentesMadrePage, PartoPage,
     PostNatalPage, CaracteristicasRelevantesPage,
     DiaroPage, EntradaPage, PerfilCasoPage, EnfPage, CalcularEnfPage,
-    ResultadoEnfPage, DiaroGeneralPage, GraficoPage
+    ResultadoEnfPage, DiaroGeneralPage, GraficoPage, SubirPage
   ],
   providers: [
     StatusBar,
@@ -73,7 +78,9 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     VariablesProvider,
-    AlmacenarProvider
+    AlmacenarProvider,
+    ImagePicker,
+    Camera
   ]
 })
 export class AppModule {}

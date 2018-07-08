@@ -19,3 +19,4 @@ export { CalcularEnfPage } from "./calcular-enf/calcular-enf"
 export { ResultadoEnfPage } from "./resultado-enf/resultado-enf";
 export { DiaroGeneralPage } from "./diaro-general/diaro-general";
 export { GraficoPage } from "./grafico/grafico";
+export { SubirPage } from "./subir/subir";

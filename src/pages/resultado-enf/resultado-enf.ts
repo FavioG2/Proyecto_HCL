@@ -27,7 +27,7 @@ export class ResultadoEnfPage {
   eliminar(){
     let alert = this.alertCtrl.create({
         title: 'Eliminar ENF',
-        message: 'Estás seguro de que deseas eliminar este cálculo de ENF?',
+        message: 'Estás seguro de querer eliminar este cálculo de ENF?',
         buttons: [
             {
                 text: 'No',
@@ -44,6 +44,8 @@ export class ResultadoEnfPage {
             }
         ]
     })
+
+    alert.present();
   }
 
   color(indice:string){

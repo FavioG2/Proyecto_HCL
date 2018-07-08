@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController, ModalController} from 'ionic-angular';
 
 
 import { VariablesProvider } from '../../providers/variables/variables';
@@ -8,7 +8,7 @@ import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
 import { paciente } from "../../pages/clases/pacientes"
 
 
-import { PacientePage } from "../../pages/index.paginas";
+import { PacientePage, SubirPage } from "../../pages/index.paginas";
 
 @IonicPage()
 @Component({
@@ -24,7 +24,8 @@ export class RegistroPacientePage {
               public vars : VariablesProvider,
               private almacenar : AlmacenarProvider,
               public loadingCtrl: LoadingController,
-              public alertCtrl : AlertController) {
+              public alertCtrl : AlertController,
+              private modalCtlr : ModalController) {
   }
 
   ionViewDidLoad() {
@@ -55,7 +56,7 @@ export class RegistroPacientePage {
   eliminar(){
     let alert = this.alertCtrl.create({
         title: 'Eliminar paciente',
-        message: 'Estás seguro de que deseas eliminar a ' + this.vars.paciente.nombre +'?',
+        message: 'Estás seguro de querer eliminar a ' + this.vars.paciente.nombre +'?',
         buttons: [
             {
                 text: 'No',
@@ -79,6 +80,11 @@ export class RegistroPacientePage {
 
 
 
+  }
+
+  mostrar_modal(){
+    let modal = this.modalCtlr.create(SubirPage);
+    modal.present();
   }
 
   presentLoadingDefault(contenido: string) {

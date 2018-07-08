@@ -52,7 +52,7 @@ export class EntradaPage {
   eliminar(){
     let alert = this.alertCtrl.create({
         title: 'Eliminar entrada',
-        message: 'Estás seguro de que deseas eliminar esta entrada del diario?',
+        message: 'Estás seguro de querer eliminar esta entrada del diario?',
         buttons: [
             {
                 text: 'No',
