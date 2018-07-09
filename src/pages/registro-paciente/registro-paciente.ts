@@ -102,6 +102,20 @@ export class RegistroPacientePage {
     }, 2000);
 }
 
+calc(){
+  if(this.paciente.fecha_nac.length>0){
+    var born = parseInt(this.paciente.fecha_nac.substring(0,4), 10);
+    var currentYear = new Date();
+    var year = currentYear.getFullYear();
+    var edad = year - born;
+    this.paciente.edad = edad;
+  }
+  else{
+    this.almacenar.showAlert("Atención", "Debes llenar la fecha de nacimiento para calcular la edad");
+  }
+
+}
+
 
 
 }

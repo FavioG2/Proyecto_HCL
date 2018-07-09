@@ -32,17 +32,18 @@
         </ion-item>
       </ion-card>
       <ion-card id = "rounded">
+        <ion-item class="top-5" id = "rounded">
+          <ion-label>Fecha de nacimiento</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="paciente.fecha_nac"></ion-datetime>
+        </ion-item>
+      </ion-card>
+      <ion-card id = "rounded">
         <ion-item id = "rounded">
             <ion-label floating>Edad cronológica (en años) </ion-label>
             <ion-input name="edad" type="number" autocapitalize="off" required [(ngModel)]="paciente.edad">
             </ion-input>
         </ion-item>
-      </ion-card>
-      <ion-card id = "rounded">
-        <ion-item class="top-5" id = "rounded">
-          <ion-label>Fecha de nacimiento</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="paciente.fecha_nac"></ion-datetime>
-        </ion-item>
+        <button ion-button  color="primary" round (click)="calc()" icon-left><ion-icon name="calculator"></ion-icon>Calcular</button>
       </ion-card>
       <ion-card id = rounded>
         <ion-item>
