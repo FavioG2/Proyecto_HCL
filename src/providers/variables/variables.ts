@@ -23,6 +23,7 @@ export class VariablesProvider {
   public fechas:Array<string>;
   public notas:Array<number>;
   public home:boolean = false;
+  public archivo:string;
   constructor() {
     console.log('Hello VariablesProvider Provider');
   }

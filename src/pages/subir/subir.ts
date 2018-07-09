@@ -7,6 +7,7 @@ import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { CargaArchivoProvider } from '../../providers/carga-archivo/carga-archivo'
+import { AlmacenarProvider } from "../../providers/almacenar/almacenar"
 /**
  * Generated class for the SubirPage page.
  *
@@ -24,11 +25,12 @@ export class SubirPage {
   imagenPreview:string;
   imagen64:string;
   img:boolean = false;
+  url:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               private viewCtrl : ViewController, private vars : VariablesProvider,
               private imagePicker: ImagePicker, private camera: Camera,
-              public _cap : CargaArchivoProvider ) {
+              public _cap : CargaArchivoProvider, public almacenar : AlmacenarProvider ) {
   }
 
   ionViewDidLoad() {
@@ -81,12 +83,37 @@ export class SubirPage {
   }
 
   subir_imagen(){
-    console.log(this.imagen64);
     let archivo = {
-      img:this.imagen64
+      img:this.imagen64,
+      titulo:"hola"
     }
 
-    this._cap.cargar_imagen_firebase(archivo);
+    let n:string;
+
+    this._cap.cargar_imagen_firebase(archivo).then((nombre:string)=> {
+        this.obtener_url(nombre);
+        this.cerrar_modal();
+    });
+
+
+    /*this._cap.carga_url(name).then((url:string) => {
+      this._cap.showAlert("atencion2", url);
+    });*/
   }
+
+  obtener_url(nombre:string){
+
+    console.log("alv");
+    let dir:string;
+    this._cap.carga_url(nombre).then(
+      (url:string) => {
+        this.vars.paciente.url_img = url;
+      }
+    );
+
+  }
+
+
+
 
 }

@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams, LoadingController, AlertController
 
 import { VariablesProvider } from '../../providers/variables/variables';
 import { AlmacenarProvider } from "../../providers/almacenar/almacenar";
+import { CargaArchivoProvider } from "../../providers/carga-archivo/carga-archivo";
 
 import { paciente } from "../../pages/clases/pacientes"
 
@@ -25,7 +26,8 @@ export class RegistroPacientePage {
               private almacenar : AlmacenarProvider,
               public loadingCtrl: LoadingController,
               public alertCtrl : AlertController,
-              private modalCtlr : ModalController) {
+              private modalCtlr : ModalController,
+              public carga : CargaArchivoProvider ) {
   }
 
   ionViewDidLoad() {
@@ -85,6 +87,7 @@ export class RegistroPacientePage {
   mostrar_modal(){
     let modal = this.modalCtlr.create(SubirPage);
     modal.present();
+
   }
 
   presentLoadingDefault(contenido: string) {

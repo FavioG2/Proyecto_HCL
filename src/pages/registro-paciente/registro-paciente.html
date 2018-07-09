@@ -18,6 +18,11 @@
   </ion-fab>
   <font color="#c91e52"><b >Completa el formulario</b></font>
   <ion-grid>
+    <ion-row>
+        <ion-col>
+            <img style="max-width:100px;" [src]="this.vars.paciente.url_img">
+        </ion-col>
+    </ion-row>
     <ion-col>
       <ion-card id = "rounded">
         <ion-item id = "rounded">
@@ -47,7 +52,7 @@
         </ion-item>
       </ion-card>
       <ion-row>
-          <button ion-button block outline  color="primary" round (click)="mostrar_modal()">Agregar una imagen</button>
+          <button ion-button block outline  color="primary" round (click)="mostrar_modal()">Cambiar la imagen</button>
       </ion-row>
       <ion-row>
         <button  class = "top-20" ion-button block icon-left color="primary" round (click)="registrar()">
