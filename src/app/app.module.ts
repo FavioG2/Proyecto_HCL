@@ -26,6 +26,7 @@ import { RegistroPacientePage, ElegirPacientePage, PacientePage, VerHclPage, Ide
         SubirPage} from '../pages/index.paginas';
 import { VariablesProvider } from '../providers/variables/variables';
 import { AlmacenarProvider } from '../providers/almacenar/almacenar';
+import { CargaArchivoProvider } from '../providers/carga-archivo/carga-archivo';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyBXrUaZ_kYyeux83Z0FFx9Mml89SRGbQKg",
@@ -80,7 +81,8 @@ export const firebaseConfig = {
     VariablesProvider,
     AlmacenarProvider,
     ImagePicker,
-    Camera
+    Camera,
+    CargaArchivoProvider
   ]
 })
 export class AppModule {}
