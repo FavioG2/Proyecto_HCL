@@ -24,7 +24,7 @@ export class AlmacenarProvider {
     this.itemsCollection = this.afs.collection(coleccion);
     this.itemsCollection.doc(key).set(objeto).then(
       result => {
-        this.showAlert('Registro', 'Registro realizado exitosamente');
+        this.showAlert('Registro', 'Información guardada exitosamente');
       }
     ).catch(
       error => {
