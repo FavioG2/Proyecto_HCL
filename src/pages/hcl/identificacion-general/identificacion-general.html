@@ -8,14 +8,13 @@
 
   <ion-navbar color = "primary">
   </ion-navbar>
-
+  <ion-fab top right>
+    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-fab top right edge>
-    <button ion-fab mini color = "secondary" (click) = "guardar_hcl()"><ion-icon name="cloud-upload"></ion-icon></button>
-  </ion-fab>
 
   <ion-grid>
     <ion-row>
@@ -34,7 +33,9 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Fecha de nacimiento</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_nac"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_nac" 
+          monthShortNames ='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic'
+          doneText = "Aceptar" cancelText = "Cancelar" ></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>
@@ -88,7 +89,9 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Fecha de entrevista</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_entrevista"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="hcl.fecha_entrevista" 
+          monthShortNames ='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic'
+          doneText = "Aceptar" cancelText = "Cancelar" ></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>

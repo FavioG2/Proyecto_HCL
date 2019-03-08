@@ -10,19 +10,21 @@
     <ion-title>Entrada</ion-title>
   </ion-navbar>
 
+  <ion-fab top right>
+    <button ion-fab mini color = "secondary" [disabled] = "entry.dia == ''" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
+  </ion-fab>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-fab top right edge>
-    <button ion-fab mini color = "secondary" [disabled] = "entry.dia == ''" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
-  </ion-fab>
   <ion-grid>
     <ion-row>
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Fecha de la actividad</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY" max="2020-10-31"  [(ngModel)]="entry.dia"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY" max="2020-10-31" 
+          monthShortNames ='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic'
+          doneText = "Aceptar" cancelText = "Cancelar"  [(ngModel)]="entry.dia"></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>
@@ -30,7 +32,7 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Hora de la actividad</ion-label>
-          <ion-datetime displayFormat="hh:mm"  [(ngModel)]="entry.hora"></ion-datetime>
+          <ion-datetime displayFormat="hh:mm"  doneText = "Aceptar" cancelText = "Cancelar" [(ngModel)]="entry.hora"></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>

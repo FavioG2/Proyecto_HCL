@@ -19,7 +19,9 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Registrar fecha</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="enf.fecha"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="enf.fecha" 
+          monthShortNames ='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic'
+          doneText = "Aceptar" cancelText = "Cancelar" ></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>

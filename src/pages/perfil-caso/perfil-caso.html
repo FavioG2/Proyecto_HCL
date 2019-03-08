@@ -9,15 +9,15 @@
   <ion-navbar color = "primary">
     <ion-title>perfil de Caso</ion-title>
   </ion-navbar>
+  <ion-fab top right>
+    <button ion-fab mini color = "secondary" (click) = "guardar_pc()"><ion-icon name="cloud-upload"></ion-icon></button>
+  </ion-fab>
 
 </ion-header>
 
 
 <ion-content padding>
 
-  <ion-fab top right edge>
-    <button ion-fab mini color = "secondary" (click) = "guardar_pc()"><ion-icon name="cloud-upload"></ion-icon></button>
-  </ion-fab>
   <ion-grid>
     <ion-row>
         <font color="#c91e52"><b >DATOS GENERALES</b></font>
@@ -35,7 +35,9 @@
       <ion-card id = "rounded">
         <ion-item class="top-5" id = "rounded">
           <ion-label>Fecha de observacion</ion-label>
-          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="pc.fecha_observacion"></ion-datetime>
+          <ion-datetime displayFormat="MMM DD YYYY"  [(ngModel)]="pc.fecha_observacion" 
+          monthShortNames ='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic'
+          doneText = "Aceptar" cancelText = "Cancelar" ></ion-datetime>
         </ion-item>
       </ion-card>
     </ion-row>

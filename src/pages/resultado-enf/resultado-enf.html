@@ -9,14 +9,14 @@
   <ion-navbar color = "primary">
     <ion-title>Resultados</ion-title>
   </ion-navbar>
+  <ion-fab top right>
+    <button ion-fab mini color = "secondary" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
+  </ion-fab>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-fab top right edge>
-    <button ion-fab mini color = "secondary" (click) = "eliminar()"><ion-icon name="trash"></ion-icon></button>
-  </ion-fab>
   <ion-grid>
     <ion-card id = "rounded">
       <ion-item >
